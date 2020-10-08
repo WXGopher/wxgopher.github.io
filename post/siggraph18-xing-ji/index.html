@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>SIGGRAPH&#39;18行纪 | 鲜鲜的脑洞日常/Wxgopher&#39;s  Mind-Boggling</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wxgopher.github.io/favicon.ico?v=1602158021486">
+<link rel="stylesheet" href="https://wxgopher.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="（旧文）非常不专业的角度来写一些专业的东西。
+
+Disclaimer:
+绝大多数的研究是我在非常业余的角度以及凭借不太清晰的记忆做出的判断/评价，如有不妥还望海涵/指正
+我写的是啥我都不懂，所以不要来问我 =w=
+Real time liv..." />
+    <meta name="keywords" content="graphics" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wxgopher.github.io">
+        <img src="https://wxgopher.github.io/images/avatar.png?v=1602158021486" class="site-logo">
+        <h1 class="site-title">鲜鲜的脑洞日常/Wxgopher&#39;s  Mind-Boggling</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页/Index
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档/Archive
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签/Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于/About
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      读万卷书，行万里路。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wxgopher.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">SIGGRAPH&#39;18行纪</h2>
+            <div class="post-date">2020-10-08</div>
+            
+            <div class="post-content" v-pre>
+              <p>（旧文）非常不专业的角度来写一些专业的东西。</p>
+<!-- more -->
+<p>Disclaimer:</p>
+<p>绝大多数的研究是我在非常业余的角度以及凭借不太清晰的记忆做出的判断/评价，如有不妥还望海涵/指正<br>
+我写的是啥我都不懂，所以不要来问我 =w=</p>
+<h4 id="real-time-live">Real time live</h4>
+<p>来说一下今年RTL令我印象非常深刻的工作~</p>
+<blockquote>
+<p>Gastro Ex: Real-Time Interactive Fluids and Soft Tissues on Mobile and VR：</p>
+</blockquote>
+<p>这个东东刚出来的时候我瞬间想到了两年前MS发布AR的时候，当时上台让CWRU医学院的学生演示了一下如何用VR进行医学教学。不过彼时的demo还比较粗糙，主要是在解剖跟骨架这些比较stationary的东西上。Gastro Ex是在实时模拟/展示组织被切割/撕裂以后的流血等等各种情况，是可以实时交互的（各种血腥场面让场下观众非常不适……我觉得撇开血腥不谈这个工作的效果和对医学教育的促进作用都是值得让它得到最佳工作的名号的）</p>
+<blockquote>
+<p>Democratising Mocap: Real-Time Full-Performance Motion Capture with an iPhone X, Xsens, IKINEMA, and Unreal Engine：</p>
+</blockquote>
+<p>这个工作最让我惊艳的地方在于，我觉得实时的mocap(motion capture)然后再让屏幕上面的模型动起来还需要几年，但是看这个工作感觉已经是实现了。</p>
+<blockquote>
+<p>Wonder Painter: Turn Anything into Animation：</p>
+</blockquote>
+<p>来自国内小小牛的一个很有意思的工作，简单来说就是神笔马良=w=，开发一款这样的寓教于乐的软件应该对启迪孩子的心智很有帮助。</p>
+<h4 id="chromaglasses-computational-glasses-for-compensating-colour-blindness">ChromaGlasses: Computational Glasses for Compensating Colour Blindness</h4>
+<p>色盲/色弱患者的福音。在显示的时候通过分析色盲/色弱患者对真实颜色的视觉差异进行自动填补/覆盖。相似的产品似乎已经商业化了（比如EnChroma）。值得一提的是这篇文章的数据处理方式采用的Wilcoxon检验比较有启发（也许这种有对照组的实验来度量改进与否都是这么做的？）。我当时问了作者你们这个检验方法能不能搞置信度？作者表示一脸懵逼以及并不能。因为我现在做的一篇文章也是想找一个量化指标来衡量改进的，因为这个还特意去查了他们的分析方法，发现并不能直接套过来用……不过好像我老板已经有了一个靠谱的idea，等我实现出来了觉得work的话再加进来。</p>
+<h4 id="deep-learning-a-crash-course">Deep Learning: A Crash Course</h4>
+<p>这门课在三小时的时间内梳理了DL的全貌，很值得一看，油管上有视频，老师抖得包袱还蛮多的。可能很多人会觉得这门课讲的东西太基础了（我也只听了一半，后半段溜了），但是本身也是3个小时并且面向的是毫无基础的听众，所以对于感兴趣的同学来说还是值得一听的。值得一提的是最近出一篇文章叫 “Recent Advances in Deep Learning: An Overview”，搭配食用更佳。</p>
+<h4 id="en-masse">En Masse</h4>
+<p>一个Production Session主要讲Crowds的，对于我这个非影视行业从业者大概留下最深的印象就是大佬们说Coco的一个frame大概有10G……</p>
+<h4 id="computational-photographycomputational-photos-and-videosshape-analysis-using-cnn">Computational Photography/Computational Photos and Videos/Shape Analysis using CNN</h4>
+<p>Technical Papers 的爆款方向了。计算摄影学这个东东因为是可以跟vision联系起来的，而vision那边现在搞得红红火火可以搞的事情（比如colorization，Texture Synthesis等等）非常多，连带着计算摄影学也有各种搞头了。再加上神经网络（NN）/深度学习（DL）这个东西确实在很多场景上都work（但是不work的场景可能更多……），所以用上了NN和DL的文章结果都不错。但是有一些工作确实是不能generalize到另外的场景，适用性非常有限，而且如何generalize，单靠调NN和搭模型这种trick可能并走不通（并且从我的现场提问反馈来看作者或许也不知道能不能走得通），我觉得NN/DL是一个特定场景下做出来不错结果的一个很好的工具，但是有一些工作研究者给人的感觉就是把这个东西当万灵药，如果work那就搞一篇皆大欢喜，不work的话就换下一个场景了……唉说了这么多可能我以后也难逃NN/DL灌水的命运，就先不立flag的（笑哭）</p>
+<h4 id="nvidia-session">NVIDIA Session</h4>
+<p>赶上了老黄发新品，旁边的小伙伴都觉得RTX这个东东买到就是赚到。后来几天陆陆续续跟几个小伙伴和一些大佬聊了聊，少了很多原来见到了新卡的惊喜和激动，多了一些理性的思考。道听途说整理一些思考：NVIDIA的这个RTX有一定的overclaim的成分。当然overclaim作为无论是公司出产品还是研究者发文章都是会有的。老黄这次做的主要是real-time ray tracing做到了，但是path tracing做不到（我的理解是现场展示的光照/阴影demo确实是实时解算的，但是也有baked in的成分）。很多人会混淆ray tracing和path tracing的区别（实际上两者的区别并不是很大，大概类似于三文鱼和虹鳟？网上可以找到很多介绍区别的帖子），ray tracing是Witted的illumination model，而path tracing是一个更加物理的表示方法(rendering equation)，所以实现path tracing等于是物理上来实现完全的光照，这方面目前确实是“搞不动，没法搞，谁都不知道怎么搞”；最最重要的一点是——农企（AMD）啥时候打翻身仗233</p>
+<h4 id="animation-controlgpu-pipeline">Animation Control/GPU Pipeline</h4>
+<p>Animation Control是图形学的非常有搞头的方向，也是图形学中一个非常跨学科的方向。Control很多问题都是Robotics的问题（当然Robotics是一个非常广的方向，包括软件硬件等等），而Robotics已经是一个非常成熟，有着很多研究方法并且正在切实改变人类生活的学科。研究的深入和人们生活水平的提高也在给Robotics提出更多的问题。Robotics的另一个有趣的点在于，策略-反馈-控制这实际上就是强化学习（RL）在做的事情，所以计算机算力的提高给RL带来了第二春（Sutton好像前段时间出了本强化学习的第二版教材），Robotics里面本来很难解决的问题也都迎刃而解了。某次聚餐听闻某大佬说Robotics的前途/钱途是非常明朗的，所以现在上船应该是一个好时候兄弟们 =w=</p>
+<p>GPU pipeline的那个session也爆多人。@Yong He 的工作主要就是这方面的，而且世界上搞这个东东的也没几个组（我知道有CMU和Berkeley，总共的话大概一个手能数出来），所以才会有vczh几年前说Yong He他们组发siggraph像吃饭一样快233。这方面的工作我基本不了解，也就不多作评价了。</p>
+<h4 id="一些杂感番外">一些杂感/番外：</h4>
+<ol>
+<li>温哥华的好吃的真真真真真多！</li>
+<li>来温哥华一定要带伞……以及Vancouver is not real Canada，想体验真正的加拿大是什么样子的冬天来多伦多就行了（加拿大适合人类居住的基本上只有温哥华那一小块 =w=）；</li>
+<li>Electronic theater一定要早点抢票……我反正是四天都没抢到（一般票都是八点半就没了，那时候作为住airbnb自费参加的穷人大概还在地铁上……）；</li>
+<li>同理，RLT/Technical papers fast forward 也一定要早半小时以上排队，否则只能去隔壁小黑屋看直播了（别问我怎么知道的）；</li>
+<li>很多session会发纪念品，运气好的话能碰上（反正我这种非洲人是从来没有碰上过的……），比如今年无敌破坏王的session发了小插画，然后PIXAR的renderman每年都会发茶壶（2017年的茶壶能卖170刀……半个参会证回来了）；</li>
+<li>Convention Center旁边有个flyover Canada很值得一看（虽然反正我到临走也没去看上……）；</li>
+<li>报名的话学生一定要用ACM会员+学生折扣，基本上是五折，然后很多公司都会有promo code，可以再便宜50-100（美刀），比如我今年很幸运得到了某大佬给我的promo code，再加上原来的学生折扣300拿下了full conference的参会证；</li>
+<li>中午吃饭的时候会场方圆一公里的小馆子都会非常多人，所以想约饭的最好提前个30分钟左右就去；</li>
+<li>Adobe party是大佬最多的party，想混脸熟的一定要去（吃的其实也不错233）；</li>
+<li>发了SIG的小伙伴们你们都是最棒的 =w=；</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://wxgopher.github.io/tag/Y-Mvc9YSW/" class="tag">
+                    graphics
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wxgopher.github.io/post/re-xie-gu-xing-de-zhou-jian-wen-ji/">
+                  <h3 class="post-title">
+                    热血孤星--德州见闻记
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
