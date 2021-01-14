@@ -2,14 +2,14 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wxgopher.cc</id>
     <title>鲜鲜/wxgopher</title>
-    <updated>2020-12-27T12:21:48.620Z</updated>
+    <updated>2021-01-14T13:35:24.480Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wxgopher.cc"/>
     <link rel="self" href="https://wxgopher.cc/atom.xml"/>
     <subtitle>读万卷书，行万里路。</subtitle>
     <logo>https://wxgopher.cc/images/avatar.png</logo>
     <icon>https://wxgopher.cc/favicon.ico</icon>
-    <rights>All rights reserved 2020, 鲜鲜/wxgopher</rights>
+    <rights>All rights reserved 2021, 鲜鲜/wxgopher</rights>
     <entry>
         <title type="html"><![CDATA[高考后十年]]></title>
         <id>https://wxgopher.cc/post/gao-kao-hou-shi-nian/</id>
