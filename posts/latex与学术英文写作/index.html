@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html><head>
+<title>LaTeX与学术英文写作</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="LaTeX与学术英文写作" />
+<meta property="og:description" content="本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。
+LaTeX基础知识扫盲 Q：什么是LaTeX？它和TeX有什么区别？
+A：高德纳在1978年实现了第一版的TeX引擎，用来进行书籍排版。LaTeX是针对TeX进行的封装和扩展。详细的历史可以参考文末参考文献中的“雷太赫排版系统简介 / 包太雷”第8页。本文会混用TeX/LaTeX。
+Q：我可以从哪里快速上手TeX的基本概念、原理等?
+A：最快的方式是参考“雷太赫排版系统简介 / 包太雷”。
+Q：我应该在什么情况下使用TeX？
+A：会议论文投稿一般会给出TeX模板；希望写有大量数学公式的文档；进行简单的幻灯片制作（参见后文对beamer的介绍）；希望使用源码托管系统托管文档；进行书籍排版等。
+Q：什么是TeX发行版？我应该使用哪个发行版？
+A：发行版是对集合TeX排版引擎、格式、宏包、驱动等连同一些实用程序 (utilities) ，遵照 TEX 的规范打包集成在一起，形成的一套软件系统（摘自“雷太赫排版系统简介”），发行版一般自带一个编辑器前端（比如TeX Works）。笔者推荐使用TeX Live，并使用地球上现存最强的TeX专用编辑器TeX Studio进行写作，MikTeX发行版不再推荐使用，因其实现标准与TeX标准略有偏差（此处引知乎用户李阿玲的回答），导致搜索故障排查信息不如TeX Live发行版方便。CTeX套装（MikTeX&#43;WinEdt，注意这里不是指ctex宏包）不再推荐使用，因其自带的WinEdt编辑器是破解版，存在版权风险。
+Q：别人家为什么可以PDF和TeX源码双向跳转？
+A：这个特性叫SyncTeX，一般的TeX发行版是附带此功能的。SyncTeX生成的中间产物扩展名为.synctex.gz，删除这个文件并重新生成可以部分解决SyncTeX无法自动跳转的问题。
+Q：TeX Live如何安装新的宏包？
+A：通过tlmgr进行。安装TeX Live会自动安装tlmgr。或者是在CTAN查找手动下载安装。
+Q：下载安装TeX系统/宏包为什么如此慢？
+A：两个原因。其一是TeX宏包一般都非常小，又非常多，初次安装的时候会比较慢。再者TeX的主镜像源在国外。国内可以使用比较稳定的镜像源有清华大学的TUNA，参考这个页面。
+安装和配置TeX写作环境 在线写作环境 现在市面上有一些基础功能免费的在线LaTeX写作网站，例如Overleaf。这类平台的优点是便捷，多平台同步，但是也存在如下缺点：
+在线文档协作平台不符合公司的安全规范，有触犯公司高压线的风险； 故障调试不如本地环境便捷； （截止到2020年初）在线平台的代码高亮/自动补全等功能都不如TeX Studio等专业的TeX IDE。 离线写作环境 笔者推荐使用TeX Live发行版，并推荐使用TeX Studio（支持几乎市面上所有TeX前端的功能，并且是跨平台、开源、免费的）这款IDE作为协作工具。这两款软件都有Windows/Mac/Linux版本。
+从TeX Live官方网站 下载安装程序安装，然后下载TeX Studio。需要注意的是TeX Studio的安装尽量在TeX Live以后，这样TeX Studio可以正确配置相关的执行命令。
+如果不知道从哪里开始，从LaTeX Templates下载一份自己喜欢的模板，开始写作~
+一些零碎的小技巧 开始写作之前建议先通读ltxprimer（文末参考文献），这本书只有100多页，可以扫清绝大多数使用TeX遇到的障碍； LaTeX可以用来制作幻灯片，使用Beamer类； 如果要批量OCR数学公式转换成TeX代码，可以使用Mathpix。这款软件是免费试用的； 类似于C&#43;&#43;的#define，TeX有newcommmand/renewcommand； 非有必要，不要随意导入新的宏包：TeX由于历史遗留问题，宏包与宏包之间可能存在冲突； 爆栈网(stackoverflow)的TeX板块是最活跃的解决TeX问题的社区； 文献引用使用bibtex。查询引用文献可以用Google Scholar，搜索条目下面有bibtex格式。TeX Live默认配置了bibtex，只需要在文章中加入\bibliography{bibfile.bib}即可。详细的引用文献使用方法可以参考Overleaf的这个页面。 英文学术写作技巧 拿不准句子别扭不别扭，用Google搜一下； 不知道该使用的介词搭配，用英语语料库查一下（常用的英语语料库附在文末），一个使用的例子可以参考怎样利用COCA语料库提升英语用词水平？； 标点符号的使用可以参考Punctuation - English Grammar Today； 快速回顾英语语法和写作技巧参考文末附录。 推荐研读资料 LaTeX排版技术" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-05-01T12:13:38+05:30" />
+<meta property="article:modified_time" content="2019-05-01T12:13:38+05:30" /><meta property="og:site_name" content="wxgopher" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LaTeX与学术英文写作"/>
+<meta name="twitter:description" content="本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。
+LaTeX基础知识扫盲 Q：什么是LaTeX？它和TeX有什么区别？
+A：高德纳在1978年实现了第一版的TeX引擎，用来进行书籍排版。LaTeX是针对TeX进行的封装和扩展。详细的历史可以参考文末参考文献中的“雷太赫排版系统简介 / 包太雷”第8页。本文会混用TeX/LaTeX。
+Q：我可以从哪里快速上手TeX的基本概念、原理等?
+A：最快的方式是参考“雷太赫排版系统简介 / 包太雷”。
+Q：我应该在什么情况下使用TeX？
+A：会议论文投稿一般会给出TeX模板；希望写有大量数学公式的文档；进行简单的幻灯片制作（参见后文对beamer的介绍）；希望使用源码托管系统托管文档；进行书籍排版等。
+Q：什么是TeX发行版？我应该使用哪个发行版？
+A：发行版是对集合TeX排版引擎、格式、宏包、驱动等连同一些实用程序 (utilities) ，遵照 TEX 的规范打包集成在一起，形成的一套软件系统（摘自“雷太赫排版系统简介”），发行版一般自带一个编辑器前端（比如TeX Works）。笔者推荐使用TeX Live，并使用地球上现存最强的TeX专用编辑器TeX Studio进行写作，MikTeX发行版不再推荐使用，因其实现标准与TeX标准略有偏差（此处引知乎用户李阿玲的回答），导致搜索故障排查信息不如TeX Live发行版方便。CTeX套装（MikTeX&#43;WinEdt，注意这里不是指ctex宏包）不再推荐使用，因其自带的WinEdt编辑器是破解版，存在版权风险。
+Q：别人家为什么可以PDF和TeX源码双向跳转？
+A：这个特性叫SyncTeX，一般的TeX发行版是附带此功能的。SyncTeX生成的中间产物扩展名为.synctex.gz，删除这个文件并重新生成可以部分解决SyncTeX无法自动跳转的问题。
+Q：TeX Live如何安装新的宏包？
+A：通过tlmgr进行。安装TeX Live会自动安装tlmgr。或者是在CTAN查找手动下载安装。
+Q：下载安装TeX系统/宏包为什么如此慢？
+A：两个原因。其一是TeX宏包一般都非常小，又非常多，初次安装的时候会比较慢。再者TeX的主镜像源在国外。国内可以使用比较稳定的镜像源有清华大学的TUNA，参考这个页面。
+安装和配置TeX写作环境 在线写作环境 现在市面上有一些基础功能免费的在线LaTeX写作网站，例如Overleaf。这类平台的优点是便捷，多平台同步，但是也存在如下缺点：
+在线文档协作平台不符合公司的安全规范，有触犯公司高压线的风险； 故障调试不如本地环境便捷； （截止到2020年初）在线平台的代码高亮/自动补全等功能都不如TeX Studio等专业的TeX IDE。 离线写作环境 笔者推荐使用TeX Live发行版，并推荐使用TeX Studio（支持几乎市面上所有TeX前端的功能，并且是跨平台、开源、免费的）这款IDE作为协作工具。这两款软件都有Windows/Mac/Linux版本。
+从TeX Live官方网站 下载安装程序安装，然后下载TeX Studio。需要注意的是TeX Studio的安装尽量在TeX Live以后，这样TeX Studio可以正确配置相关的执行命令。
+如果不知道从哪里开始，从LaTeX Templates下载一份自己喜欢的模板，开始写作~
+一些零碎的小技巧 开始写作之前建议先通读ltxprimer（文末参考文献），这本书只有100多页，可以扫清绝大多数使用TeX遇到的障碍； LaTeX可以用来制作幻灯片，使用Beamer类； 如果要批量OCR数学公式转换成TeX代码，可以使用Mathpix。这款软件是免费试用的； 类似于C&#43;&#43;的#define，TeX有newcommmand/renewcommand； 非有必要，不要随意导入新的宏包：TeX由于历史遗留问题，宏包与宏包之间可能存在冲突； 爆栈网(stackoverflow)的TeX板块是最活跃的解决TeX问题的社区； 文献引用使用bibtex。查询引用文献可以用Google Scholar，搜索条目下面有bibtex格式。TeX Live默认配置了bibtex，只需要在文章中加入\bibliography{bibfile.bib}即可。详细的引用文献使用方法可以参考Overleaf的这个页面。 英文学术写作技巧 拿不准句子别扭不别扭，用Google搜一下； 不知道该使用的介词搭配，用英语语料库查一下（常用的英语语料库附在文末），一个使用的例子可以参考怎样利用COCA语料库提升英语用词水平？； 标点符号的使用可以参考Punctuation - English Grammar Today； 快速回顾英语语法和写作技巧参考文末附录。 推荐研读资料 LaTeX排版技术"/>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<link rel="stylesheet" href="/scss/journal.min.7c01e9f6fb2f6083d79d2f3a32ec6b7901e262e94a52a64a542aef98bc5bda64.css" integrity="sha256-fAHp9vsvYIPXnS86MuxreQHiYulKUqZKVCrvmLxb2mQ=" media="screen">
+
+
+
+<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>console.log("Hello from 'layouts/partials/extended_head.html'")</script>
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- 目录 -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#latex%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86%e6%89%ab%e7%9b%b2" class="nav-latex基础知识扫盲">
+									LaTeX基础知识扫盲
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%aetex%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83" class="nav-安装和配置tex写作环境">
+									安装和配置TeX写作环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9c%a8%e7%ba%bf%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83" class="nav-在线写作环境">
+									在线写作环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a6%bb%e7%ba%bf%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83" class="nav-离线写作环境">
+									离线写作环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%80%e4%ba%9b%e9%9b%b6%e7%a2%8e%e7%9a%84%e5%b0%8f%e6%8a%80%e5%b7%a7" class="nav-一些零碎的小技巧">
+									一些零碎的小技巧
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%8b%b1%e6%96%87%e5%ad%a6%e6%9c%af%e5%86%99%e4%bd%9c%e6%8a%80%e5%b7%a7" class="nav-英文学术写作技巧">
+									英文学术写作技巧
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a8%e8%8d%90%e7%a0%94%e8%af%bb%e8%b5%84%e6%96%99" class="nav-推荐研读资料">
+									推荐研读资料
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="http://example.org/">
+            wxgopher
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://example.org/">
+        <div class="single-column-header-title">wxgopher</div>
+        
+        <div class="single-column-header-subtitle">Themed by Diary.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    LaTeX与学术英文写作
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2019-05-01 12:13
+                        </time>
+                        
+
+                        
+                            <i class="material-icons" style="">folder</i>
+                                <a href="/categories/misc">misc</a>
+                                &nbsp;
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。</p>
+<h2 id="latex基础知识扫盲">LaTeX基础知识扫盲</h2>
+<blockquote>
+<p>Q：什么是LaTeX？它和TeX有什么区别？</p>
+</blockquote>
+<p>A：高德纳在1978年实现了第一版的TeX引擎，用来进行书籍排版。LaTeX是针对TeX进行的封装和扩展。详细的历史可以参考文末参考文献中的“雷太赫排版系统简介 / 包太雷”第8页。本文会混用TeX/LaTeX。</p>
+<blockquote>
+<p>Q：我可以从哪里快速上手TeX的基本概念、原理等?</p>
+</blockquote>
+<p>A：最快的方式是参考“雷太赫排版系统简介 / 包太雷”。</p>
+<blockquote>
+<p>Q：我应该在什么情况下使用TeX？</p>
+</blockquote>
+<p>A：会议论文投稿一般会给出TeX模板；希望写有大量数学公式的文档；进行简单的幻灯片制作（参见后文对beamer的介绍）；希望使用源码托管系统托管文档；进行书籍排版等。</p>
+<blockquote>
+<p>Q：什么是TeX发行版？我应该使用哪个发行版？</p>
+</blockquote>
+<p>A：发行版是对集合TeX排版引擎、格式、宏包、驱动等连同一些实用程序 (utilities) ，遵照 TEX 的规范打包集成在一起，形成的一套软件系统（摘自“雷太赫排版系统简介”），发行版一般自带一个编辑器前端（比如TeX Works）。笔者推荐使用TeX Live，并使用地球上现存最强的TeX专用编辑器TeX Studio进行写作，MikTeX发行版不再推荐使用，因其实现标准与TeX标准略有偏差（此处引知乎用户<a href="https://www.zhihu.com/people/li-a-ling">李阿玲</a>的回答），导致搜索故障排查信息不如TeX Live发行版方便。CTeX套装（MikTeX+WinEdt，注意这里不是指<code>ctex</code>宏包）不再推荐使用，因其自带的WinEdt编辑器是破解版，存在版权风险。</p>
+<blockquote>
+<p>Q：别人家为什么可以PDF和TeX源码双向跳转？</p>
+</blockquote>
+<p>A：这个特性叫SyncTeX，一般的TeX发行版是附带此功能的。SyncTeX生成的中间产物扩展名为<code>.synctex.gz</code>，删除这个文件并重新生成可以部分解决SyncTeX无法自动跳转的问题。</p>
+<blockquote>
+<p>Q：TeX Live如何安装新的宏包？</p>
+</blockquote>
+<p>A：通过<code>tlmgr</code>进行。安装TeX Live会自动安装<code>tlmgr</code>。或者是在<a href="https://ctan.org/">CTAN</a>查找手动下载安装。</p>
+<blockquote>
+<p>Q：下载安装TeX系统/宏包为什么如此慢？</p>
+</blockquote>
+<p>A：两个原因。其一是TeX宏包一般都非常小，又非常多，初次安装的时候会比较慢。再者TeX的主镜像源在国外。国内可以使用比较稳定的镜像源有清华大学的TUNA，参考<a href="https://mirror.tuna.tsinghua.edu.cn/help/CTAN/">这个页面</a>。</p>
+<h2 id="安装和配置tex写作环境">安装和配置TeX写作环境</h2>
+<h3 id="在线写作环境">在线写作环境</h3>
+<p>现在市面上有一些基础功能免费的在线LaTeX写作网站，例如<a href="https://www.overleaf.com/">Overleaf</a>。这类平台的优点是便捷，多平台同步，但是也存在如下缺点：</p>
+<ol>
+<li>在线文档协作平台不符合公司的安全规范，有触犯公司高压线的风险；</li>
+<li>故障调试不如本地环境便捷；</li>
+<li>（截止到2020年初）在线平台的代码高亮/自动补全等功能都不如TeX Studio等专业的TeX IDE。</li>
+</ol>
+<h3 id="离线写作环境">离线写作环境</h3>
+<p>笔者推荐使用<a href="https://www.tug.org/texlive/">TeX Live</a>发行版，并推荐使用<a href="https://www.texstudio.org/">TeX Studio</a>（支持几乎市面上所有TeX前端的功能，并且是跨平台、开源、免费的）这款IDE作为协作工具。这两款软件都有Windows/Mac/Linux版本。</p>
+<p>从TeX Live<a href="https://www.tug.org/texlive/">官方网站</a> 下载安装程序安装，然后下载TeX Studio。需要注意的是TeX Studio的安装尽量在TeX Live以后，这样TeX Studio可以正确配置相关的执行命令。</p>
+<p>如果不知道从哪里开始，从<a href="https://www.latextemplates.com/">LaTeX Templates</a>下载一份自己喜欢的模板，开始写作~</p>
+<h2 id="一些零碎的小技巧">一些零碎的小技巧</h2>
+<ol>
+<li>开始写作之前建议先通读ltxprimer（文末参考文献），这本书只有100多页，可以扫清绝大多数使用TeX遇到的障碍；</li>
+<li>LaTeX可以用来制作幻灯片，使用<a href="https://www.latextemplates.com/template/beamer-presentation">Beamer</a>类；</li>
+<li>如果要批量OCR数学公式转换成TeX代码，可以使用<a href="https://mathpix.com/">Mathpix</a>。这款软件是免费试用的；</li>
+<li>类似于C++的<code>#define</code>，TeX有<a href="https://www.complang.tuwien.ac.at/anton/latex/ltx-18.html">newcommmand/renewcommand</a>；</li>
+<li><strong>非有必要，不要随意导入新的宏包</strong>：TeX由于历史遗留问题，宏包与宏包之间可能存在冲突；</li>
+<li><a href="https://tex.stackexchange.com/">爆栈网(stackoverflow)的TeX板块</a>是最活跃的解决TeX问题的社区；</li>
+<li>文献引用使用<a href="http://www.bibtex.org/">bibtex</a>。查询引用文献可以用Google Scholar，搜索条目下面有bibtex格式。TeX Live默认配置了bibtex，只需要在文章中加入<code>\bibliography{bibfile.bib}</code>即可。详细的引用文献使用方法可以参考<a href="bibliography_management_with_bibtex">Overleaf的这个页面</a>。</li>
+</ol>
+<h2 id="英文学术写作技巧">英文学术写作技巧</h2>
+<ol>
+<li>拿不准句子别扭不别扭，用Google搜一下；</li>
+<li>不知道该使用的介词搭配，用英语语料库查一下（常用的英语语料库附在文末），一个使用的例子可以参考<a href="https://zhuanlan.zhihu.com/p/28838654">怎样利用COCA语料库提升英语用词水平？</a>；</li>
+<li>标点符号的使用可以参考<a href="https://dictionary.cambridge.org/grammar/british-grammar/punctuation">Punctuation - English Grammar Today</a>；</li>
+<li>快速回顾英语语法和写作技巧参考文末附录。</li>
+</ol>
+<h2 id="推荐研读资料">推荐研读资料</h2>
+<p>LaTeX排版技术</p>
+<ul>
+<li>雷太赫排版系统简介 / 包太雷</li>
+<li>The ltxprimer / Indian Tex User Group</li>
+<li>LaTeX入门 / 刘海洋</li>
+</ul>
+<p>英文写作（从简略到详细排序）</p>
+<ul>
+<li>语法俱乐部 / 旋元佑</li>
+<li>McGraw-Hill Handbook of English Grammar and Usage / Larry Beason and Mark Lester</li>
+<li>Academic Writing for Graduate Students / Christine B. Feak and John Swales</li>
+<li>Cambridge English in Use / Cambridge University Press</li>
+</ul>
+<p>英语语料库</p>
+<ul>
+<li><a href="https://linggle.com/">Linggle 10^12- Language Reference Search Engines</a></li>
+<li><a href="https://www.english-corpora.org/coca/">Corpus of Contenporary American English</a></li>
+</ul>
+
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">最后修改于 2019-05-01</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			下回<br>已经到头啦。
+                </a>
+                
+                
+                
+                <a class="older-posts">
+			上回<br>这是最旧的文章了。
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo=""
+        data-repo-id=""
+        data-category=""
+        data-category-id=""
+        data-mapping=""
+        data-strict=""
+        data-reactions-enabled=""
+        data-emit-metadata=""
+        data-input-position=""
+        data-theme=""
+        data-lang=""
+        crossorigin=""
+        async>
+</script>
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://example.org/">
+    
+        <div class="nav-title">
+            wxgopher
+        </div>
+        
+        <div class="nav-subtitle">
+            Themed by Diary.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2019 wxgopher
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- 目录 -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#latex%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86%e6%89%ab%e7%9b%b2" class="nav-latex基础知识扫盲">
+									LaTeX基础知识扫盲
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%aetex%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83" class="nav-安装和配置tex写作环境">
+									安装和配置TeX写作环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e5%9c%a8%e7%ba%bf%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83" class="nav-在线写作环境">
+									在线写作环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a6%bb%e7%ba%bf%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83" class="nav-离线写作环境">
+									离线写作环境
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e4%b8%80%e4%ba%9b%e9%9b%b6%e7%a2%8e%e7%9a%84%e5%b0%8f%e6%8a%80%e5%b7%a7" class="nav-一些零碎的小技巧">
+									一些零碎的小技巧
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e8%8b%b1%e6%96%87%e5%ad%a6%e6%9c%af%e5%86%99%e4%bd%9c%e6%8a%80%e5%b7%a7" class="nav-英文学术写作技巧">
+									英文学术写作技巧
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%8e%a8%e8%8d%90%e7%a0%94%e8%af%bb%e8%b5%84%e6%96%99" class="nav-推荐研读资料">
+									推荐研读资料
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2019 wxgopher
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
