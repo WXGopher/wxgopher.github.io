@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>wxgopher</title>
-    <link>http://example.org/</link>
+    <link>https://www.wxgopher.cc/</link>
     <description>Recent content on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 01 May 2019 12:13:38 +0530</lastBuildDate>
     
-        <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://www.wxgopher.cc/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>LaTeX与学术英文写作</title>
-        <link>http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</link>
+        <link>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</link>
         <pubDate>Wed, 01 May 2019 12:13:38 +0530</pubDate>
         
-        <guid>http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</guid>
-        <description>wxgopher http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/ -&lt;p&gt;本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。&lt;/p&gt;
+        <guid>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</guid>
+        <description>wxgopher https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/ -&lt;p&gt;本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。&lt;/p&gt;
 &lt;h2 id=&#34;latex基础知识扫盲&#34;&gt;LaTeX基础知识扫盲&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Q：什么是LaTeX？它和TeX有什么区别？&lt;/p&gt;
@@ -96,7 +96,7 @@
 &lt;li&gt;&lt;a href=&#34;https://linggle.com/&#34;&gt;Linggle 10^12- Language Reference Search Engines&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.english-corpora.org/coca/&#34;&gt;Corpus of Contenporary American English&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-- http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/ - </description>
+- https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/ - </description>
         </item>
     
     

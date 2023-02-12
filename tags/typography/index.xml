@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>typography on wxgopher</title>
-    <link>http://example.org/tags/typography/</link>
+    <link>https://www.wxgopher.cc/tags/typography/</link>
     <description>Recent content in typography on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2019 12:13:38 +0530</lastBuildDate><atom:link href="http://example.org/tags/typography/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 May 2019 12:13:38 +0530</lastBuildDate><atom:link href="https://www.wxgopher.cc/tags/typography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LaTeX与学术英文写作</title>
-      <link>http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</link>
+      <link>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</link>
       <pubDate>Wed, 01 May 2019 12:13:38 +0530</pubDate>
       
-      <guid>http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</guid>
+      <guid>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</guid>
       <description>本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。
 LaTeX基础知识扫盲 Q：什么是LaTeX？它和TeX有什么区别？
 A：高德纳在1978年实现了第一版的TeX引擎，用来进行书籍排版。LaTeX是针对TeX进行的封装和扩展。详细的历史可以参考文末参考文献中的“雷太赫排版系统简介 / 包太雷”第8页。本文会混用TeX/LaTeX。

@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://www.wxgopher.cc/categories/</loc>
     <lastmod>2019-05-01T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</loc>
+    <loc>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</loc>
     <lastmod>2019-05-01T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/categories/misc/</loc>
+    <loc>https://www.wxgopher.cc/categories/misc/</loc>
     <lastmod>2019-05-01T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://www.wxgopher.cc/posts/</loc>
     <lastmod>2019-05-01T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://www.wxgopher.cc/tags/</loc>
     <lastmod>2019-05-01T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/tags/typography/</loc>
+    <loc>https://www.wxgopher.cc/tags/typography/</loc>
     <lastmod>2019-05-01T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://www.wxgopher.cc/</loc>
     <lastmod>2019-05-01T12:13:38+05:30</lastmod>
   </url>
 </urlset>
