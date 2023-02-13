@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html><head>
+<title></title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:title" content="" />
+<meta property="og:description" content="title: &ldquo;Notes on ltxprimer&rdquo; date: 2016-05-01T12:13:38&#43;05:30 description: categories: misc tags: typography enableLaTeX: true
+The basics Period: latex assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&rsquo;t want this, so:
+In order to produce Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?, the correct input should be Carrots are good for your eyes, since they contain Vitamin A\@." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.wxgopher.cc/posts/notes_theltxprimer/" /><meta property="article:section" content="posts" />
+
+<meta property="og:site_name" content="wxgopher" />
+
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="title: &ldquo;Notes on ltxprimer&rdquo; date: 2016-05-01T12:13:38&#43;05:30 description: categories: misc tags: typography enableLaTeX: true
+The basics Period: latex assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&rsquo;t want this, so:
+In order to produce Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?, the correct input should be Carrots are good for your eyes, since they contain Vitamin A\@."/>
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+      <script src="/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+<link rel="stylesheet" href="/scss/journal.min.7c01e9f6fb2f6083d79d2f3a32ec6b7901e262e94a52a64a542aef98bc5bda64.css" integrity="sha256-fAHp9vsvYIPXnS86MuxreQHiYulKUqZKVCrvmLxb2mQ=" media="screen">
+
+
+
+<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>console.log("Hello from 'layouts/partials/extended_head.html'")</script>
+
+</head>
+<body>
+    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/posts">
+                    Archive
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/categories">
+                    Categories
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/index.xml">
+                    RSS Feed
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- 目录 -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#the-basics" class="nav-the-basics">
+									The basics
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#period" class="nav-period">
+									Period:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#quotes" class="nav-quotes">
+									Quotes:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hyphenation" class="nav-hyphenation">
+									Hyphenation:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#accents" class="nav-accents">
+									Accents:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#fonts" class="nav-fonts">
+									Fonts
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#document" class="nav-document">
+									Document
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#page-format" class="nav-page-format">
+									Page format
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#page-style" class="nav-page-style">
+									Page style
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#forming-a-document" class="nav-forming-a-document">
+									Forming a document
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#bibliography" class="nav-bibliography">
+									Bibliography
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#table-of-contents-index-and-glossary" class="nav-table-of-contents-index-and-glossary">
+									Table of contents, index and glossary
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#displayed-text" class="nav-displayed-text">
+									Displayed text
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#rows-and-columns" class="nav-rows-and-columns">
+									Rows and columns
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mathematics" class="nav-mathematics">
+									Mathematics
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#boxes" class="nav-boxes">
+									Boxes
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#floats" class="nav-floats">
+									Floats
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cross-references" class="nav-cross-references">
+									Cross references
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#footnotes-marginpars-and-endnotes" class="nav-footnotes-marginpars-and-endnotes">
+									Footnotes, marginpars, and endnotes
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://www.wxgopher.cc/">
+            wxgopher
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://www.wxgopher.cc/">
+        <div class="single-column-header-title">wxgopher</div>
+        
+        <div class="single-column-header-subtitle">Themed by Diary.</div>
+        
+
+    </a>
+</div>
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    
+                    
+                    <div class="post-meta">
+                        
+
+                        
+
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <p>title: &ldquo;Notes on ltxprimer&rdquo;
+date: 2016-05-01T12:13:38+05:30
+description:
+categories: misc
+tags: typography
+enableLaTeX: true</p>
+<h3 id="the-basics">The basics</h3>
+<hr>
+<h4 id="period">Period:</h4>
+<p><code>latex</code> assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&rsquo;t want this, so:</p>
+<p>In order to produce
+<code>Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?</code>, the correct input should be <code>Carrots are good for your eyes, since they contain Vitamin A\@. Have you ever seen a rabbit wearing glasses?</code>.</p>
+<p>To produce
+<code>The numbers 1, 2, 3, etc. are called natural numbers. According to Kronecker, they were made by God; all else being the work of Man.</code>, the correct input should be <code>The numbers 1, 2, 3, etc.\ are called natural numbers. According to Kronecker, they were made by God;all else being the works of Man.</code>.</p>
+<h4 id="quotes">Quotes:</h4>
+<p>To produce &ldquo;&rdquo;, input <code>``</code> and <code>''</code>, or use <code>\lq</code> and <code>\rq</code> instead.</p>
+<h4 id="hyphenation">Hyphenation:</h4>
+<ul>
+<li>Hyphen (<code>-</code>): separating compound names. e.g., Munthe-Kaas;</li>
+<li>Compound nouns are not hyphenated, but compound adjectives are; e.g., Lie group as opposed to Lie-group method. Compound adjectives that use adverbs are not hyphenated; e.g., &ldquo;diagonally implicit method&rdquo; is correct;</li>
+<li><code>--</code> (em-dash): used between two people, e.g., Runge&ndash;Kutta;</li>
+<li><code>---</code> (en-dash): connects things that are related to each other by distance, as in the <code>May–September issue of a magazine</code>.</li>
+</ul>
+<h4 id="accents">Accents:</h4>
+<p><code>Él está aquı́</code>, input <code>\’{E}l est\’{a} aqu\’{\i}</code>.</p>
+<p>Some special symbols:</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Input</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~</td>
+<td>\textasciitilde</td>
+</tr>
+<tr>
+<td>\</td>
+<td>\textbackslash</td>
+</tr>
+<tr>
+<td>_</td>
+<td>\ _</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fonts">Fonts</h4>
+<p>Style (roman, sans serif, etc.), series (medium, boldface, etc.), shape (upright, italic, etc.)</p>
+<p>Declaration (<code>\upshape</code>) and command (<code>\textup{}</code>). The declaration can be used as enviroment names.</p>
+<p>Optional arguments are inclosed in <code>[]</code>, and mandatory arguments are inclosed in <code>()</code>.</p>
+<h3 id="document">Document</h3>
+<hr>
+<h4 id="page-format">Page format</h4>
+<ul>
+<li>onecolumn/twocolumn</li>
+<li>oneside/twoside (affects position of page number)</li>
+<li>openany(chapters begin on “any” new page)/openright(chapters begin only on new right , that is, odd numbered, page)</li>
+<li>notitlepage/titlepage (whether to separate title page)</li>
+</ul>
+<h4 id="page-style">Page style</h4>
+<ul>
+<li>
+<p><code>\pagestyle{...},\thispagestyle{...}</code></p>
+</li>
+<li>
+<p>plain/empty/headings/myheadings</p>
+</li>
+<li>
+<p><code>\pagenumbering{...}</code></p>
+</li>
+<li>
+<p>arabic/roman/Roman/alph/Alph</p>
+</li>
+<li>
+<p><code>\setcounter{page}{ number }</code></p>
+</li>
+</ul>
+<h4 id="forming-a-document">Forming a document</h4>
+<ul>
+<li><code>\and</code> helps you to put authors parallel</li>
+<li>A proper hierarchy:\chapter\section\subsection\subsubsection\paragraph\subparagraph</li>
+<li><code>\subsubsection</code> is not numbered</li>
+<li>A detailed structure, see P24 and 25</li>
+<li><a href="https://tex.stackexchange.com/questions/82664/when-to-use-par-and-when-or-blank-lines">\Par and &ldquo;\&quot;</a></li>
+</ul>
+<h3 id="bibliography">Bibliography</h3>
+<hr>
+<ul>
+<li>Bib style packages: harvard, natbib</li>
+<li>With <code>\nocite{*}</code> , every entry in all the databases will be included, something that is useful when producing a list of all entries and their keys.</li>
+<li><code>aux</code>: reference auxiliary; <code>bib</code>: original bib; <code>bst</code>: bib style; <code>bbl</code> formatted bib; <code>blg</code>: log</li>
+</ul>
+<h3 id="table-of-contents-index-and-glossary">Table of contents, index and glossary</h3>
+<hr>
+<ul>
+<li>
+<p><code>.toc</code>: table of contents, <code>*.lot</code> list of tables, <code>*.lof</code> list of figures</p>
+</li>
+<li>
+<blockquote>
+<p>Edit the .toc , lof , lot files and use a \nofiles command to suppress the writing of new versions of the files</p>
+</blockquote>
+<p>is the last resort for you to fine-tune TOC</p>
+</li>
+<li>
+<p>Use <code>\addtocontents{ file }{ text }</code>  or<code>\addcontentsline{ file }{ type }{ text }</code> to add sections marked with <code>*</code> (will be omitted by default) (Actually <code>\addcontentsline</code> is invoked by <code>\section</code> or <code>caption</code>)</p>
+</li>
+<li>
+<p>Fragile argument: <a href="https://tex.stackexchange.com/questions/4736/what-is-the-difference-between-fragile-and-robust-commands">What is the difference between Fragile and Robust commands</a></p>
+</li>
+<li>
+<p><code>minitoc</code> for mini TOC</p>
+</li>
+<li>
+<p><code>makeidx</code>to make index (<code>*.idx</code> file)</p>
+</li>
+<li>
+<p><code>\makeglossary</code> to make glossary (<code>*.glo</code> file)</p>
+</li>
+</ul>
+<h3 id="displayed-text">Displayed text</h3>
+<hr>
+<ul>
+<li>Quotation <code>\begin{quote} \end{quote}</code> or (for multiple paragraphs) <code>\begin{quotation} \end{quotation}</code></li>
+<li><code>verse</code> environment to quote poem. Use <code>\\*</code> to put it within a page. Use <code>\\[n pt]</code> to specify line space</li>
+<li><code>{\renewcommand{\labelitemi}{$\triangleright$}</code> (for example, <code>\labelitemi</code>, <code>\labelitemiv</code>, etc.) to replace default itemize bullets. Use <code>{}</code> to enclose <code>\renewcommand</code> and anything else for local effect only</li>
+<li>Package <code>enumerate</code> for customized enumerate bullets and other formatting styles</li>
+<li><code>\renewcommand{\descriptionlabel}[1]{\hspace{1cm}\textsf{#1}}</code> example to customize description</li>
+<li><code>enumerate</code> can also include description</li>
+</ul>
+<h3 id="rows-and-columns">Rows and columns</h3>
+<hr>
+<ul>
+<li>
+<p><code>tabbing</code> environment for vertical alignment in <code>enumerate</code></p>
+</li>
+<li>
+<p>Use parbox to format column cells</p>
+</li>
+<li>
+<p><code>\multicolumn{1} </code>can override the position specification of any column set at the beginning of the environment.</p>
+</li>
+<li>
+<p><code>\arraystretch</code> to stretch columns</p>
+</li>
+<li>
+<p>Use <code>r@{--}l</code> for range. Example:</p>
+<pre tabindex="0"><code>\begin{center}
+\begin{tabular}{|c|r@{--}l|}
+\hline
+Height &amp; \multicolumn{2}{c|}{Ideal weight}\\
+(cm)
+&amp; \multicolumn{2}{c|}{(kg)}\\
+\hline
+155 &amp; 53.5 &amp; 64\\
+160 &amp; 56
+&amp; 67\\
+...............
+190 &amp; 78
+&amp; 92.5\\
+\hline
+\end{tabular}
+\end{center}
+</code></pre></li>
+<li>
+<p>Enhancement: <code>array</code>, <code>multirow</code>, <code>multicol</code>, <code>longtable</code>, <code>hhline</code>, <code>delarray</code>, <code>tabularx</code> etc.</p>
+</li>
+</ul>
+<h3 id="mathematics">Mathematics</h3>
+<hr>
+<ul>
+<li>
+<p>Text placed within <code>$$</code> is in math italic</p>
+</li>
+<li>
+<p>TeX has its own spacing rules in math mode</p>
+</li>
+<li>
+<p>Inline math: in LaTeX:<code>\( ... \)</code> or <code>\begin{math}\end{math}</code>); in TeX: <code>$$</code></p>
+</li>
+<li>
+<p>Independent line: in LaTeX: <code>\[\]</code> or <code>\begin{displaymath}\end{displaymath}</code>, in TeX: <code>$$$$</code></p>
+</li>
+<li>
+<p><code>\;</code>: thickspace, <code>\,</code> thinspace</p>
+</li>
+<li>
+<p><code>\ldots</code>: ellipsis (<code>...</code>)</p>
+</li>
+<li>
+<p>Binary operator:<code>\mathbin</code>; relation operator: <code>\mathrel</code></p>
+<pre tabindex="0"><code>x\Box y % produces x\Boxy
+x\mathbin\Box y % produces x \Box y
+</code></pre></li>
+<li>
+<p><code>\newcommand{\vect}[1]{(#1_1,#1_2,\dots,#1_n)}% use \vect{sth}</code> will substitute 1 to sth (2 and #2, 3 and #3&hellip; is the same)</p>
+</li>
+<li>
+<p>The <code>amsmath</code> package:</p>
+<ul>
+<li>
+<p>Multi-line equation: <code>multline</code> env; use <code>split</code> env and <code>&amp;</code> for alignment</p>
+</li>
+<li>
+<p>Multi equations: <code>gather</code> env pr <code>align</code> env</p>
+</li>
+<li>
+<p>An example: gather two groups of equations together</p>
+<ul>
+<li>
+<pre tabindex="0"><code>\begin{equation*}
+	\begin{aligned}
+		\cosˆ2x+sinˆ2x &amp; = 1\\
+		\cosˆ2x-\sinˆ2x &amp; = \cos 2x
+	\end{aligned}
+	\qquad\text{and}\qquad
+	\begin{aligned}
+		\coshˆ2x-\sinhˆ2x &amp; = 1\\
+		\coshˆ2x+\sinhˆ2x &amp; = \cosh 2x
+	\end{aligned}
+\end{equation*}
+</code></pre></li>
+</ul>
+</li>
+<li>
+<p><code>\tag{}</code> for customized equation label; <code>\notag</code> to suppress</p>
+</li>
+<li>
+<p><code>pmatrix</code> is enclosed in parentheses,  <code>bmatrix</code> is in square brackets, <code>Bmatrix</code> is in braces, and <code>vmatrix</code> is for determinant</p>
+</li>
+<li>
+<p><code>\dotsc</code>  for dots to be used with commas, <code>\dotsb</code> for dots with binary operations (or relations), and <code>\dotsm</code> for multiplication dots. There is also a <code>\dotsi</code> for dots with integrals</p>
+</li>
+<li>
+<p><code>smallmatrix</code> env for inline matrices (use <code>\left \right</code> for appropriate alignment for brackets)</p>
+</li>
+<li>
+<p><code>\bigl, \bigr; \biggl, \biggr; \Biggl, \Biggr</code> to control bracket sizes (if you find using <code>\left \right</code> produces too large brackets)</p>
+</li>
+<li>
+<p><code>\tfrac</code> a &ldquo;tiny&rdquo; version of <code>\frac</code>, <code>\genfrac</code> for a customized frac. Note, binomial coefficients <code>\binom</code> is a special case of <code>\genfrac</code></p>
+</li>
+<li>
+<p><code>\verset</code> for putting symbols overhead. e.g. <code>$\overset{\circ}{a}$</code></p>
+</li>
+<li>
+<p><code>\displaystyle</code> changes inline expressions to displayed style (as in env).</p>
+</li>
+<li>
+<p><code>\substack</code> for multi-line subscripts.</p>
+</li>
+<li>
+<p>Refer to &ldquo;Log-like symbols&rdquo; for math notations that should be typed in Roman (other than usual italic)</p>
+</li>
+<li>
+<p><code>\DeclareMathOperator*{\new_operator}{statement}</code></p>
+</li>
+<li>
+<p>&ldquo;The TEX Book&rdquo;: more on typing math</p>
+</li>
+</ul>
+</li>
+<li>
+<p>\newtheorem{user_difined}{displayed_test}[numbering_style]<code>, for </code>userdefined` env</p>
+</li>
+<li>
+<p>Customized theorem: <code>amsthm</code> package</p>
+</li>
+</ul>
+<h3 id="boxes">Boxes</h3>
+<hr>
+<ul>
+<li>
+<p>A box is an object that is treated by TEX as a single character. A box cannot be split and broken across lines or pages.</p>
+</li>
+<li>
+<p>3 types of boxes:</p>
+<ul>
+<li>LR: (left-right) The content of this box are typeset from left to right.</li>
+<li>Par: (paragraphs) This kind of box can contain several lines, which will be typeset in paragraph mode just like normal text. Paragraphs are put one on top of the other. Their widths are controlled by a user specified value.</li>
+<li>Rule: A thin or thick line that is often used to separate various logical elements on the output page, such as between table rows and columns and between running titles and the main text.</li>
+</ul>
+</li>
+<li>
+<p>LR boxes:</p>
+<ul>
+<li>
+<pre tabindex="0"><code>\mbox{ text } % without frame
+\makebox{ width }{ pos }{ text } % without frame
+\fbox{ text } % with frame
+\framebox{ width }{ pos }{ text } % with frame
+% pos arguments: l for left, r for right, c for center, s for stretch (in-text spaces)
+</code></pre></li>
+<li>
+<p><code>\fboxrule</code>, <code>\fboxsep</code>, and<code>\raisebox</code> for determining frame style, box positions(or rotations)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Par boxes:</p>
+<ul>
+<li>Use either <code>\parbox</code> or <code>minipage</code> env (<code>minipage</code> is a page itself, i.e., it has footnotes, contains tabular, etc.)</li>
+<li><code>\parbox{ pos }{ height }{ inner pos }{ width }{ text }</code> or <code>\begin{minipage}{ pos }{ height }{ inner pos }{ width }</code>, with <code>t,b,c,s</code> for top, bottom, center, stretch</li>
+</ul>
+</li>
+<li>
+<p>A rule box is basically a filled-in black rectangle.</p>
+</li>
+<li>
+<blockquote>
+<p>It is also possible to have a rule box of zero width. This creates an invisible line with the given height. Such a construction is called a strut and is used to force a horizontal box to have a desired height or depth that is different from that of its contents.</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="floats">Floats</h3>
+<hr>
+<ul>
+<li>
+<p>Figures:</p>
+</li>
+<li>
+<pre tabindex="0"><code>\begin{figure}
+	\includegraphics{figure.eps}
+	\caption{This is an inserted EPS graphic} 
+	% use \caption[lof]{description} to produce concise description in list of figures
+	\label{fig1}
+\end{figure}
+</code></pre><ul>
+<li>Figures are not allowed in boxes (<code>\parbox</code> or <code>minipage</code>)</li>
+<li>Positional arguments: h for here, t for top, b for bottom and p for page containing only floats (default <code>[tbp]</code>)</li>
+<li><code>\clearpage</code> : This command places unprocessed floats and starts a new page.</li>
+<li><code>\FloatBarrier</code>: This command causes all unprocessed floats to be processed. This is provided by the <code>placeins</code> package. It does not start a new page, unlike <code>\clearpage </code>.</li>
+<li>To place figures within a section: <code>\usepackage[section]{placeins}</code>, a less-restrictive one: <code>\usepackage[below]{placeins}</code></li>
+<li>The <code>afterpage</code> package provides the \afterpage command which executes a command at the next naturally-ocurring page break. (<code>\afterpage{\clearpage} </code>causes all unprocessed floats to be cleared at the next page break.)</li>
+<li>Use float placement counters to control number of floats per page: <code>\setcounter{totalnumber/topnumber/bottomnumber}{n}</code></li>
+<li>Adjust float coverage per page using <code>\textfraction</code> etc.</li>
+<li>Add graphics search path: <code>\graphicspath{{dir1/}{dir2/}}</code></li>
+<li><code>\rotatebox</code> and <code>\scalebox</code> provided by <code>graphicx</code> package can rotate and boxes and floats</li>
+</ul>
+</li>
+<li>
+<p><code>tabular</code> is actually a <code>minipage</code></p>
+<ul>
+<li>
+<p>The <code>tabular</code> env:</p>
+</li>
+<li>
+<p>`\begin{ tabular }[ pos ]{ cols } rows \end{ tabular }``</p>
+</li>
+<li>
+<p>``\begin{ tabular* }{ width }[ pos ]{ cols } rows \end{ tabular* }`</p>
+</li>
+<li>
+<p>Column positioning arguments:</p>
+<table>
+<thead>
+<tr>
+<th>cols</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td>left</td>
+</tr>
+<tr>
+<td>r</td>
+<td>right</td>
+</tr>
+<tr>
+<td>c</td>
+<td>center</td>
+</tr>
+<tr>
+<td>{ wd }</td>
+<td>The text in this column is set into lines of width wd and the top line is aligned with the other columns. In fact, the text is set in a parbox with the command \parbox[ t ]{ wd }{ column text } .</td>
+</tr>
+<tr>
+<td>* { num }{ cols }</td>
+<td>The column format contained in cols is reproduced num times, so that *{3}{|c|}| is the same as |c|c|c| .</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cross-references">Cross references</h3>
+<hr>
+<ul>
+<li>&ldquo;cross&rdquo; means both backward AND  forward</li>
+<li>Use <code>~</code> in your cross reference to avoid breaking lines</li>
+<li>In floats, <code>\label</code> command should be given after the <code>\caption</code> command or in its argument</li>
+<li><code>\pageref{ key }</code> refer to page number</li>
+<li>Package <code>varioref</code> (<code>\vref{key}</code>) produces &ldquo;full&rdquo; reference (position, page number, etc.) using some rules.  (produce <code>ref</code> and/or <code>\pageref</code> depending on the current page)</li>
+<li>Use package <code>xr</code> for external reference: <code>\usepackage{xr} \externaldocument{ other.tex }</code></li>
+</ul>
+<h3 id="footnotes-marginpars-and-endnotes">Footnotes, marginpars, and endnotes</h3>
+<hr>
+<ul>
+<li>Use <code>tabularx</code>, <code>longtable</code> or wrap <code>tabular</code> in <code>minipage</code> if you want to use footnote inside a <code>tabular</code>. Another package called <code>threeparttable</code> is also helpful.</li>
+<li><code>\setcounter{footnote}{0}</code> for resetting footnote counter (or use <code>\@addtoreset{footnote}{section}</code> in <code>\makeatletter</code> or <code>\makeatother</code> preamble)</li>
+<li><code>\marginpar</code> for marginal notes. A better version (macro): <code>\newcommand{\marginlabel}[1] {\mbox{}\marginpar{\raggedleft\hspace{0pt}#1}}</code></li>
+<li>Create query for margin notes: <code>\def\query#1#2{\underline{#1}\marginpar{#2}}</code></li>
+<li>Package <code>endnotes</code> for endnotes.</li>
+</ul>
+
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/">
+			下回<br>LaTeX与学术英文写作
+                </a>
+                
+                
+                
+                <a class="older-posts">
+			上回<br>这是最旧的文章了。
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://giscus.app/client.js"
+        data-repo=""
+        data-repo-id=""
+        data-category=""
+        data-category-id=""
+        data-mapping=""
+        data-strict=""
+        data-reactions-enabled=""
+        data-emit-metadata=""
+        data-input-position=""
+        data-theme=""
+        data-lang=""
+        crossorigin=""
+        async>
+</script>
+
+            </div>
+        </div>
+    </div>
+
+
+                    </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://www.wxgopher.cc/">
+    
+        <div class="nav-title">
+            wxgopher
+        </div>
+        
+        <div class="nav-subtitle">
+            Themed by Diary.
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/posts">
+                Archive
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/categories">
+                Categories
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/index.xml">
+                RSS Feed
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2019 wxgopher
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- 目录 -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#the-basics" class="nav-the-basics">
+									The basics
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#period" class="nav-period">
+									Period:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#quotes" class="nav-quotes">
+									Quotes:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#hyphenation" class="nav-hyphenation">
+									Hyphenation:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#accents" class="nav-accents">
+									Accents:
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#fonts" class="nav-fonts">
+									Fonts
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#document" class="nav-document">
+									Document
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#page-format" class="nav-page-format">
+									Page format
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#page-style" class="nav-page-style">
+									Page style
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#forming-a-document" class="nav-forming-a-document">
+									Forming a document
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#bibliography" class="nav-bibliography">
+									Bibliography
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#table-of-contents-index-and-glossary" class="nav-table-of-contents-index-and-glossary">
+									Table of contents, index and glossary
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#displayed-text" class="nav-displayed-text">
+									Displayed text
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#rows-and-columns" class="nav-rows-and-columns">
+									Rows and columns
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mathematics" class="nav-mathematics">
+									Mathematics
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#boxes" class="nav-boxes">
+									Boxes
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#floats" class="nav-floats">
+									Floats
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#cross-references" class="nav-cross-references">
+									Cross references
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#footnotes-marginpars-and-endnotes" class="nav-footnotes-marginpars-and-endnotes">
+									Footnotes, marginpars, and endnotes
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div><div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2019 wxgopher
+	
+</div>
+            </div>
+    
+    <script src="/js/journal.js"></script></body>
+</html>
