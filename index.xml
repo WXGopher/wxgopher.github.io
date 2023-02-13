@@ -101,6 +101,418 @@
     
     
     
+        <item>
+        <title>Notes on ltxprimer</title>
+        <link>https://www.wxgopher.cc/posts/notes_theltxprimer/</link>
+        <pubDate>Sun, 01 May 2016 12:13:38 +0530</pubDate>
+        
+        <guid>https://www.wxgopher.cc/posts/notes_theltxprimer/</guid>
+        <description>wxgopher https://www.wxgopher.cc/posts/notes_theltxprimer/ -&lt;p&gt;Source: theltxprimer from Indian TeX group&lt;/p&gt;
+&lt;h3 id=&#34;the-basics&#34;&gt;The basics&lt;/h3&gt;
+&lt;h4 id=&#34;period&#34;&gt;Period:&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;latex&lt;/code&gt; assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&amp;rsquo;t want this, so:&lt;/p&gt;
+&lt;p&gt;In order to produce
+&lt;code&gt;Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?&lt;/code&gt;, the correct input should be &lt;code&gt;Carrots are good for your eyes, since they contain Vitamin A\@. Have you ever seen a rabbit wearing glasses?&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;To produce
+&lt;code&gt;The numbers 1, 2, 3, etc. are called natural numbers. According to Kronecker, they were made by God; all else being the work of Man.&lt;/code&gt;, the correct input should be &lt;code&gt;The numbers 1, 2, 3, etc.\ are called natural numbers. According to Kronecker, they were made by God;all else being the works of Man.&lt;/code&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;quotes&#34;&gt;Quotes:&lt;/h4&gt;
+&lt;p&gt;To produce &amp;ldquo;&amp;rdquo;, input &lt;code&gt;``&lt;/code&gt; and &lt;code&gt;&#39;&#39;&lt;/code&gt;, or use &lt;code&gt;\lq&lt;/code&gt; and &lt;code&gt;\rq&lt;/code&gt; instead.&lt;/p&gt;
+&lt;h4 id=&#34;hyphenation&#34;&gt;Hyphenation:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Hyphen (&lt;code&gt;-&lt;/code&gt;): separating compound names. e.g., Munthe-Kaas;&lt;/li&gt;
+&lt;li&gt;Compound nouns are not hyphenated, but compound adjectives are; e.g., Lie group as opposed to Lie-group method. Compound adjectives that use adverbs are not hyphenated; e.g., &amp;ldquo;diagonally implicit method&amp;rdquo; is correct;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--&lt;/code&gt; (em-dash): used between two people, e.g., Runge&amp;ndash;Kutta;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;---&lt;/code&gt; (en-dash): connects things that are related to each other by distance, as in the &lt;code&gt;May–September issue of a magazine&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;accents&#34;&gt;Accents:&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;Él está aquı́&lt;/code&gt;, input &lt;code&gt;\’{E}l est\’{a} aqu\’{\i}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Some special symbols:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Symbol&lt;/th&gt;
+&lt;th&gt;Input&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;~&lt;/td&gt;
+&lt;td&gt;\textasciitilde&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;\&lt;/td&gt;
+&lt;td&gt;\textbackslash&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;_&lt;/td&gt;
+&lt;td&gt;\ _&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;fonts&#34;&gt;Fonts&lt;/h4&gt;
+&lt;p&gt;Style (roman, sans serif, etc.), series (medium, boldface, etc.), shape (upright, italic, etc.)&lt;/p&gt;
+&lt;p&gt;Declaration (&lt;code&gt;\upshape&lt;/code&gt;) and command (&lt;code&gt;\textup{}&lt;/code&gt;). The declaration can be used as enviroment names.&lt;/p&gt;
+&lt;p&gt;Optional arguments are inclosed in &lt;code&gt;[]&lt;/code&gt;, and mandatory arguments are inclosed in &lt;code&gt;()&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;document&#34;&gt;Document&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;page-format&#34;&gt;Page format&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;onecolumn/twocolumn&lt;/li&gt;
+&lt;li&gt;oneside/twoside (affects position of page number)&lt;/li&gt;
+&lt;li&gt;openany(chapters begin on “any” new page)/openright(chapters begin only on new right , that is, odd numbered, page)&lt;/li&gt;
+&lt;li&gt;notitlepage/titlepage (whether to separate title page)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;page-style&#34;&gt;Page style&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\pagestyle{...},\thispagestyle{...}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;plain/empty/headings/myheadings&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\pagenumbering{...}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;arabic/roman/Roman/alph/Alph&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\setcounter{page}{ number }&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;forming-a-document&#34;&gt;Forming a document&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\and&lt;/code&gt; helps you to put authors parallel&lt;/li&gt;
+&lt;li&gt;A proper hierarchy:\chapter\section\subsection\subsubsection\paragraph\subparagraph&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\subsubsection&lt;/code&gt; is not numbered&lt;/li&gt;
+&lt;li&gt;A detailed structure, see P24 and 25&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://tex.stackexchange.com/questions/82664/when-to-use-par-and-when-or-blank-lines&#34;&gt;\Par and &amp;ldquo;\&amp;quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;bibliography&#34;&gt;Bibliography&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Bib style packages: harvard, natbib&lt;/li&gt;
+&lt;li&gt;With &lt;code&gt;\nocite{*}&lt;/code&gt; , every entry in all the databases will be included, something that is useful when producing a list of all entries and their keys.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;aux&lt;/code&gt;: reference auxiliary; &lt;code&gt;bib&lt;/code&gt;: original bib; &lt;code&gt;bst&lt;/code&gt;: bib style; &lt;code&gt;bbl&lt;/code&gt; formatted bib; &lt;code&gt;blg&lt;/code&gt;: log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;table-of-contents-index-and-glossary&#34;&gt;Table of contents, index and glossary&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;.toc&lt;/code&gt;: table of contents, &lt;code&gt;*.lot&lt;/code&gt; list of tables, &lt;code&gt;*.lof&lt;/code&gt; list of figures&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Edit the .toc , lof , lot files and use a \nofiles command to suppress the writing of new versions of the files&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;is the last resort for you to fine-tune TOC&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use &lt;code&gt;\addtocontents{ file }{ text }&lt;/code&gt;  or&lt;code&gt;\addcontentsline{ file }{ type }{ text }&lt;/code&gt; to add sections marked with &lt;code&gt;*&lt;/code&gt; (will be omitted by default) (Actually &lt;code&gt;\addcontentsline&lt;/code&gt; is invoked by &lt;code&gt;\section&lt;/code&gt; or &lt;code&gt;caption&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fragile argument: &lt;a href=&#34;https://tex.stackexchange.com/questions/4736/what-is-the-difference-between-fragile-and-robust-commands&#34;&gt;What is the difference between Fragile and Robust commands&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;minitoc&lt;/code&gt; for mini TOC&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;makeidx&lt;/code&gt;to make index (&lt;code&gt;*.idx&lt;/code&gt; file)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\makeglossary&lt;/code&gt; to make glossary (&lt;code&gt;*.glo&lt;/code&gt; file)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;displayed-text&#34;&gt;Displayed text&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Quotation &lt;code&gt;\begin{quote} \end{quote}&lt;/code&gt; or (for multiple paragraphs) &lt;code&gt;\begin{quotation} \end{quotation}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;verse&lt;/code&gt; environment to quote poem. Use &lt;code&gt;\\*&lt;/code&gt; to put it within a page. Use &lt;code&gt;\\[n pt]&lt;/code&gt; to specify line space&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{\renewcommand{\labelitemi}{$\triangleright$}&lt;/code&gt; (for example, &lt;code&gt;\labelitemi&lt;/code&gt;, &lt;code&gt;\labelitemiv&lt;/code&gt;, etc.) to replace default itemize bullets. Use &lt;code&gt;{}&lt;/code&gt; to enclose &lt;code&gt;\renewcommand&lt;/code&gt; and anything else for local effect only&lt;/li&gt;
+&lt;li&gt;Package &lt;code&gt;enumerate&lt;/code&gt; for customized enumerate bullets and other formatting styles&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\renewcommand{\descriptionlabel}[1]{\hspace{1cm}\textsf{#1}}&lt;/code&gt; example to customize description&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;enumerate&lt;/code&gt; can also include description&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rows-and-columns&#34;&gt;Rows and columns&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tabbing&lt;/code&gt; environment for vertical alignment in &lt;code&gt;enumerate&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use parbox to format column cells&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\multicolumn{1} &lt;/code&gt;can override the position specification of any column set at the beginning of the environment.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\arraystretch&lt;/code&gt; to stretch columns&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Use &lt;code&gt;r@{--}l&lt;/code&gt; for range. Example:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{center}
+\begin{tabular}{|c|r@{--}l|}
+\hline
+Height &amp;amp; \multicolumn{2}{c|}{Ideal weight}\\
+(cm)
+&amp;amp; \multicolumn{2}{c|}{(kg)}\\
+\hline
+155 &amp;amp; 53.5 &amp;amp; 64\\
+160 &amp;amp; 56
+&amp;amp; 67\\
+...............
+190 &amp;amp; 78
+&amp;amp; 92.5\\
+\hline
+\end{tabular}
+\end{center}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Enhancement: &lt;code&gt;array&lt;/code&gt;, &lt;code&gt;multirow&lt;/code&gt;, &lt;code&gt;multicol&lt;/code&gt;, &lt;code&gt;longtable&lt;/code&gt;, &lt;code&gt;hhline&lt;/code&gt;, &lt;code&gt;delarray&lt;/code&gt;, &lt;code&gt;tabularx&lt;/code&gt; etc.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mathematics&#34;&gt;Mathematics&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Text placed within &lt;code&gt;$$&lt;/code&gt; is in math italic&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TeX has its own spacing rules in math mode&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Inline math: in LaTeX:&lt;code&gt;\( ... \)&lt;/code&gt; or &lt;code&gt;\begin{math}\end{math}&lt;/code&gt;); in TeX: &lt;code&gt;$$&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Independent line: in LaTeX: &lt;code&gt;\[\]&lt;/code&gt; or &lt;code&gt;\begin{displaymath}\end{displaymath}&lt;/code&gt;, in TeX: &lt;code&gt;$$$$&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\;&lt;/code&gt;: thickspace, &lt;code&gt;\,&lt;/code&gt; thinspace&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\ldots&lt;/code&gt;: ellipsis (&lt;code&gt;...&lt;/code&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Binary operator:&lt;code&gt;\mathbin&lt;/code&gt;; relation operator: &lt;code&gt;\mathrel&lt;/code&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;x\Box y % produces x\Boxy
+x\mathbin\Box y % produces x \Box y
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\newcommand{\vect}[1]{(#1_1,#1_2,\dots,#1_n)}% use \vect{sth}&lt;/code&gt; will substitute 1 to sth (2 and #2, 3 and #3&amp;hellip; is the same)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;amsmath&lt;/code&gt; package:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Multi-line equation: &lt;code&gt;multline&lt;/code&gt; env; use &lt;code&gt;split&lt;/code&gt; env and &lt;code&gt;&amp;amp;&lt;/code&gt; for alignment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Multi equations: &lt;code&gt;gather&lt;/code&gt; env pr &lt;code&gt;align&lt;/code&gt; env&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;An example: gather two groups of equations together&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{equation*}
+	\begin{aligned}
+		\cosˆ2x+sinˆ2x &amp;amp; = 1\\
+		\cosˆ2x-\sinˆ2x &amp;amp; = \cos 2x
+	\end{aligned}
+	\qquad\text{and}\qquad
+	\begin{aligned}
+		\coshˆ2x-\sinhˆ2x &amp;amp; = 1\\
+		\coshˆ2x+\sinhˆ2x &amp;amp; = \cosh 2x
+	\end{aligned}
+\end{equation*}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\tag{}&lt;/code&gt; for customized equation label; &lt;code&gt;\notag&lt;/code&gt; to suppress&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;pmatrix&lt;/code&gt; is enclosed in parentheses,  &lt;code&gt;bmatrix&lt;/code&gt; is in square brackets, &lt;code&gt;Bmatrix&lt;/code&gt; is in braces, and &lt;code&gt;vmatrix&lt;/code&gt; is for determinant&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\dotsc&lt;/code&gt;  for dots to be used with commas, &lt;code&gt;\dotsb&lt;/code&gt; for dots with binary operations (or relations), and &lt;code&gt;\dotsm&lt;/code&gt; for multiplication dots. There is also a &lt;code&gt;\dotsi&lt;/code&gt; for dots with integrals&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;smallmatrix&lt;/code&gt; env for inline matrices (use &lt;code&gt;\left \right&lt;/code&gt; for appropriate alignment for brackets)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\bigl, \bigr; \biggl, \biggr; \Biggl, \Biggr&lt;/code&gt; to control bracket sizes (if you find using &lt;code&gt;\left \right&lt;/code&gt; produces too large brackets)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\tfrac&lt;/code&gt; a &amp;ldquo;tiny&amp;rdquo; version of &lt;code&gt;\frac&lt;/code&gt;, &lt;code&gt;\genfrac&lt;/code&gt; for a customized frac. Note, binomial coefficients &lt;code&gt;\binom&lt;/code&gt; is a special case of &lt;code&gt;\genfrac&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\verset&lt;/code&gt; for putting symbols overhead. e.g. &lt;code&gt;$\overset{\circ}{a}$&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\displaystyle&lt;/code&gt; changes inline expressions to displayed style (as in env).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\substack&lt;/code&gt; for multi-line subscripts.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Refer to &amp;ldquo;Log-like symbols&amp;rdquo; for math notations that should be typed in Roman (other than usual italic)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\DeclareMathOperator*{\new_operator}{statement}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;ldquo;The TEX Book&amp;rdquo;: more on typing math&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;\newtheorem{user_difined}{displayed_test}[numbering_style]&lt;code&gt;, for &lt;/code&gt;userdefined` env&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Customized theorem: &lt;code&gt;amsthm&lt;/code&gt; package&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;boxes&#34;&gt;Boxes&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;A box is an object that is treated by TEX as a single character. A box cannot be split and broken across lines or pages.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3 types of boxes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LR: (left-right) The content of this box are typeset from left to right.&lt;/li&gt;
+&lt;li&gt;Par: (paragraphs) This kind of box can contain several lines, which will be typeset in paragraph mode just like normal text. Paragraphs are put one on top of the other. Their widths are controlled by a user specified value.&lt;/li&gt;
+&lt;li&gt;Rule: A thin or thick line that is often used to separate various logical elements on the output page, such as between table rows and columns and between running titles and the main text.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LR boxes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\mbox{ text } % without frame
+\makebox{ width }{ pos }{ text } % without frame
+\fbox{ text } % with frame
+\framebox{ width }{ pos }{ text } % with frame
+% pos arguments: l for left, r for right, c for center, s for stretch (in-text spaces)
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;\fboxrule&lt;/code&gt;, &lt;code&gt;\fboxsep&lt;/code&gt;, and&lt;code&gt;\raisebox&lt;/code&gt; for determining frame style, box positions(or rotations)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Par boxes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use either &lt;code&gt;\parbox&lt;/code&gt; or &lt;code&gt;minipage&lt;/code&gt; env (&lt;code&gt;minipage&lt;/code&gt; is a page itself, i.e., it has footnotes, contains tabular, etc.)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\parbox{ pos }{ height }{ inner pos }{ width }{ text }&lt;/code&gt; or &lt;code&gt;\begin{minipage}{ pos }{ height }{ inner pos }{ width }&lt;/code&gt;, with &lt;code&gt;t,b,c,s&lt;/code&gt; for top, bottom, center, stretch&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A rule box is basically a filled-in black rectangle.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is also possible to have a rule box of zero width. This creates an invisible line with the given height. Such a construction is called a strut and is used to force a horizontal box to have a desired height or depth that is different from that of its contents.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;floats&#34;&gt;Floats&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Figures:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;\begin{figure}
+	\includegraphics{figure.eps}
+	\caption{This is an inserted EPS graphic} 
+	% use \caption[lof]{description} to produce concise description in list of figures
+	\label{fig1}
+\end{figure}
+&lt;/code&gt;&lt;/pre&gt;&lt;ul&gt;
+&lt;li&gt;Figures are not allowed in boxes (&lt;code&gt;\parbox&lt;/code&gt; or &lt;code&gt;minipage&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;Positional arguments: h for here, t for top, b for bottom and p for page containing only floats (default &lt;code&gt;[tbp]&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\clearpage&lt;/code&gt; : This command places unprocessed floats and starts a new page.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\FloatBarrier&lt;/code&gt;: This command causes all unprocessed floats to be processed. This is provided by the &lt;code&gt;placeins&lt;/code&gt; package. It does not start a new page, unlike &lt;code&gt;\clearpage &lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;To place figures within a section: &lt;code&gt;\usepackage[section]{placeins}&lt;/code&gt;, a less-restrictive one: &lt;code&gt;\usepackage[below]{placeins}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;afterpage&lt;/code&gt; package provides the \afterpage command which executes a command at the next naturally-ocurring page break. (&lt;code&gt;\afterpage{\clearpage} &lt;/code&gt;causes all unprocessed floats to be cleared at the next page break.)&lt;/li&gt;
+&lt;li&gt;Use float placement counters to control number of floats per page: &lt;code&gt;\setcounter{totalnumber/topnumber/bottomnumber}{n}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Adjust float coverage per page using &lt;code&gt;\textfraction&lt;/code&gt; etc.&lt;/li&gt;
+&lt;li&gt;Add graphics search path: &lt;code&gt;\graphicspath{{dir1/}{dir2/}}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\rotatebox&lt;/code&gt; and &lt;code&gt;\scalebox&lt;/code&gt; provided by &lt;code&gt;graphicx&lt;/code&gt; package can rotate and boxes and floats&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;tabular&lt;/code&gt; is actually a &lt;code&gt;minipage&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;code&gt;tabular&lt;/code&gt; env:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;`\begin{ tabular }[ pos ]{ cols } rows \end{ tabular }``&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;``\begin{ tabular* }{ width }[ pos ]{ cols } rows \end{ tabular* }`&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Column positioning arguments:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;cols&lt;/th&gt;
+&lt;th&gt;meaning&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;l&lt;/td&gt;
+&lt;td&gt;left&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;r&lt;/td&gt;
+&lt;td&gt;right&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;c&lt;/td&gt;
+&lt;td&gt;center&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;{ wd }&lt;/td&gt;
+&lt;td&gt;The text in this column is set into lines of width wd and the top line is aligned with the other columns. In fact, the text is set in a parbox with the command \parbox[ t ]{ wd }{ column text } .&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;* { num }{ cols }&lt;/td&gt;
+&lt;td&gt;The column format contained in cols is reproduced num times, so that *{3}{|c|}| is the same as |c|c|c| .&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cross-references&#34;&gt;Cross references&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;cross&amp;rdquo; means both backward AND  forward&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;~&lt;/code&gt; in your cross reference to avoid breaking lines&lt;/li&gt;
+&lt;li&gt;In floats, &lt;code&gt;\label&lt;/code&gt; command should be given after the &lt;code&gt;\caption&lt;/code&gt; command or in its argument&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\pageref{ key }&lt;/code&gt; refer to page number&lt;/li&gt;
+&lt;li&gt;Package &lt;code&gt;varioref&lt;/code&gt; (&lt;code&gt;\vref{key}&lt;/code&gt;) produces &amp;ldquo;full&amp;rdquo; reference (position, page number, etc.) using some rules.  (produce &lt;code&gt;ref&lt;/code&gt; and/or &lt;code&gt;\pageref&lt;/code&gt; depending on the current page)&lt;/li&gt;
+&lt;li&gt;Use package &lt;code&gt;xr&lt;/code&gt; for external reference: &lt;code&gt;\usepackage{xr} \externaldocument{ other.tex }&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;footnotes-marginpars-and-endnotes&#34;&gt;Footnotes, marginpars, and endnotes&lt;/h3&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;tabularx&lt;/code&gt;, &lt;code&gt;longtable&lt;/code&gt; or wrap &lt;code&gt;tabular&lt;/code&gt; in &lt;code&gt;minipage&lt;/code&gt; if you want to use footnote inside a &lt;code&gt;tabular&lt;/code&gt;. Another package called &lt;code&gt;threeparttable&lt;/code&gt; is also helpful.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\setcounter{footnote}{0}&lt;/code&gt; for resetting footnote counter (or use &lt;code&gt;\@addtoreset{footnote}{section}&lt;/code&gt; in &lt;code&gt;\makeatletter&lt;/code&gt; or &lt;code&gt;\makeatother&lt;/code&gt; preamble)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\marginpar&lt;/code&gt; for marginal notes. A better version (macro): &lt;code&gt;\newcommand{\marginlabel}[1] {\mbox{}\marginpar{\raggedleft\hspace{0pt}#1}}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Create query for margin notes: &lt;code&gt;\def\query#1#2{\underline{#1}\marginpar{#2}}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Package &lt;code&gt;endnotes&lt;/code&gt; for endnotes.&lt;/li&gt;
+&lt;/ul&gt;
+- https://www.wxgopher.cc/posts/notes_theltxprimer/ - </description>
+        </item>
+    
     
   </channel>
 </rss> 
