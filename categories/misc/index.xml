@@ -6,7 +6,25 @@
     <description>Recent content in misc on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2019 12:13:38 +0530</lastBuildDate><atom:link href="https://www.wxgopher.cc/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Feb 2023 12:13:38 +0530</lastBuildDate><atom:link href="https://www.wxgopher.cc/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>建站小记</title>
+      <link>https://www.wxgopher.cc/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</link>
+      <pubDate>Wed, 15 Feb 2023 12:13:38 +0530</pubDate>
+      
+      <guid>https://www.wxgopher.cc/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</guid>
+      <description>准备重开个人博客，希望跟世界建立更多的连接。网络上的帖子看了很多也折腾了许久，但是弱水三千只取一瓢，最后自己摸索出来的建站方案是各个帖子东拼西凑下来的。记录下来供有缘人参考。
+建站和写作 创建一个私人的Github 仓库（例如叫Hugo_Site），我采用的是Hugo。直接按照官方的指南安装即可。我使用的主题是Diary。将主题下载下来，放到themes目录中。
+对于图文博客，初期没有考虑图床。为了更方便管理，我参考的是Hugo如何在markdown里引用本地图片。我使用的是Typora写作，在Typora中将存储图片到相同目录这个选项打开即可。在写作的时候，在/Content/Posts目录下新建一个文件夹，在其内新建一个index.md，在这个md文件中写作。图片会存储在这个文件夹内，在生成站点的时候也会自动被Hugo拷贝到正确的目录，不用我们管。
+写完文章以后在我们的仓库根目录下hugo server -d就可以预览网站，直接hugo生成网站。
+最后我们的目录树如下：
+├── .git //这是我们的私人仓库 ├── .github //这是我们使用github action的地方，用于部署 │ └── workflows ├── .gitignore //[1] ├── .gitmodules ├── assets ├── config.toml ├── content │ └── posts //文章贴这里 ├── data ├── public //[2] │ ├── .git ├── resources │ └── _gen ├── static //[3] └── themes └── diary 注释：
+.gitignore参考https://github.com/github/gitignore/blob/main/community/Golang/Hugo.gitignore 这个目录就是我们的网站目录。首先需要在Github上新建一个公开仓库，命名为username.github.io。然后在这个public目录下新建一个本地git仓库，git remote add origin设置为username.github.io这个远程仓库。 在生成网站以后，将username.github.io这个仓库Push到Github，稍等片刻访问username.github.io就能看到我们的个人博客上线啦。
+如果需要自定义域名，从域名提供商那里购买域名，然后设置解析到username.github.io即可。我的域名(www.wxgopher.cc)是在Cloudflare购买的。在Cloudflare的设置界面中设置CNAME代理www到wxgopher.github.io。同时在wxgopher.github.io的repo中找到Settings-&amp;gt;Pages-&amp;gt;Custom Domain，设置www.wxgopher.cc。
+部署和SEO 我们每次写完博客以后必须本地hugo生成一下，然后手动Push /Public中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push Hugo_Site的时候自动触发网站构建并推送到Github Pages。
+首先在Github账户中找到Setting - Developer setting - Personal access tokens。新建一个token，开启Repo和workflow权限，然后记录下这个Token。注意，这个Token只会展示一次。</description>
+    </item>
+    
     <item>
       <title>LaTeX与学术英文写作</title>
       <link>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</link>
