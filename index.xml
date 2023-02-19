@@ -48,6 +48,7 @@
 &lt;/ol&gt;
 &lt;p&gt;在生成网站以后，将&lt;code&gt;username.github.io&lt;/code&gt;这个仓库Push到Github，稍等片刻访问&lt;code&gt;username.github.io&lt;/code&gt;就能看到我们的个人博客上线啦。&lt;/p&gt;
 &lt;p&gt;如果需要自定义域名，从域名提供商那里购买域名，然后设置解析到&lt;code&gt;username.github.io&lt;/code&gt;即可。我的域名(&lt;a href=&#34;https://www.wxgopher.cc&#34;&gt;www.wxgopher.cc&lt;/a&gt;)是在Cloudflare购买的。在Cloudflare的设置界面中设置CNAME代理www到wxgopher.github.io。同时在wxgopher.github.io的repo中找到Settings-&amp;gt;Pages-&amp;gt;Custom Domain，设置www.wxgopher.cc。&lt;/p&gt;
+&lt;p&gt;20230219更新：将网站同时部署到了cloudflare pages，提高国内的访问速度。域名设置重定向到cloudflare pages。如何设置只需要按照cloudflare手册操作即可。&lt;/p&gt;
 &lt;h2 id=&#34;部署和seo&#34;&gt;部署和SEO&lt;/h2&gt;
 &lt;p&gt;我们每次写完博客以后必须本地&lt;code&gt;hugo&lt;/code&gt;生成一下，然后手动Push &lt;code&gt;/Public&lt;/code&gt;中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push &lt;code&gt;Hugo_Site&lt;/code&gt;的时候自动触发网站构建并推送到Github Pages。&lt;/p&gt;
 &lt;p&gt;首先在Github账户中找到Setting - Developer setting - Personal access tokens。新建一个token，开启Repo和workflow权限，然后记录下这个Token。注意，这个Token只会展示一次。&lt;/p&gt;

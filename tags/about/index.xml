@@ -21,8 +21,8 @@
 ├── .git //这是我们的私人仓库 ├── .github //这是我们使用github action的地方，用于部署 │ └── workflows ├── .gitignore //[1] ├── .gitmodules ├── assets ├── config.toml ├── content │ └── posts //文章贴这里 ├── data ├── public //[2] │ ├── .git ├── resources │ └── _gen ├── static //[3] └── themes └── diary 注释：
 .gitignore参考https://github.com/github/gitignore/blob/main/community/Golang/Hugo.gitignore 这个目录就是我们的网站目录。首先需要在Github上新建一个公开仓库，命名为username.github.io。然后在这个public目录下新建一个本地git仓库，git remote add origin设置为username.github.io这个远程仓库。 在生成网站以后，将username.github.io这个仓库Push到Github，稍等片刻访问username.github.io就能看到我们的个人博客上线啦。
 如果需要自定义域名，从域名提供商那里购买域名，然后设置解析到username.github.io即可。我的域名(www.wxgopher.cc)是在Cloudflare购买的。在Cloudflare的设置界面中设置CNAME代理www到wxgopher.github.io。同时在wxgopher.github.io的repo中找到Settings-&amp;gt;Pages-&amp;gt;Custom Domain，设置www.wxgopher.cc。
-部署和SEO 我们每次写完博客以后必须本地hugo生成一下，然后手动Push /Public中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push Hugo_Site的时候自动触发网站构建并推送到Github Pages。
-首先在Github账户中找到Setting - Developer setting - Personal access tokens。新建一个token，开启Repo和workflow权限，然后记录下这个Token。注意，这个Token只会展示一次。</description>
+20230219更新：将网站同时部署到了cloudflare pages，提高国内的访问速度。域名设置重定向到cloudflare pages。如何设置只需要按照cloudflare手册操作即可。
+部署和SEO 我们每次写完博客以后必须本地hugo生成一下，然后手动Push /Public中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push Hugo_Site的时候自动触发网站构建并推送到Github Pages。</description>
     </item>
     
   </channel>
