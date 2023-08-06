@@ -6,9 +6,39 @@
     <description>Recent content on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Feb 2023 12:13:38 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 01 Aug 2023 12:13:38 +0530</lastBuildDate>
     
         <atom:link href="https://www.wxgopher.cc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>最近看了什么/2307</title>
+        <link>https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/</link>
+        <pubDate>Tue, 01 Aug 2023 12:13:38 +0530</pubDate>
+        
+        <guid>https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/</guid>
+        <description>wxgopher https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/ -&lt;p&gt;新开一个专栏，讲讲最近看到的有意思的东西（书，文章，视频等等），随缘挑内容，随缘更新。&lt;/p&gt;
+&lt;p&gt;想开这个专栏的主要原因是最近闲逛发现一篇非常好的课程笔记，然后翻了翻收藏夹发现了很多真的不错的东西收藏夹直接吃灰了，那么就让他们换一个地方吃灰，能帮到有缘人也是极好的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dynamic Deformables: Implementation and Production Practicalities&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ted在SIGGRAPH 2022发的一篇课程笔记。做软体的大概率看过这里面的一些论文。这篇讲的是皮克斯内部用的软体模拟器背后的工作原理。比较难能可贵的是相比传统的力学教材，这篇笔记明显是有过大量工程实践经验的人写出来的，告诉了你很多Dos and Don&amp;rsquo;ts.力学教材我也看过一些，如果不写代码的话差不多除了deformation gradient以后的东西都记不得了。实践还是非常重要的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;吕思勉中国通史&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这虽然是一本教材，但是是我见过的比较少的开篇就让读者“下头”的教材。吕先生在绪论中便说（即使是经过大量考据的）历史仍不可以尽信，而吕著中国通史还是做了大量的考据工作。半文半白的行文方式如果接受了义务教育基本还能看得懂，没有网上说的那么晦涩。&lt;/p&gt;
+&lt;p&gt;想起来兰小欢教授的微博曾经发过的一段话，想去找发现兰教授的微博已经注销了，很遗憾。大意是说，国内走走，找一找自己在中国人中的位置。出国走一走，找一找自己作为中国人在世界中的位置。吕著中国通史便是一本可以让自己找到在世界中的位置的书。兰小欢教授在《置身事内》里面写过的一段话：我相信中国会更好。这源于司马迁、杜甫、苏轼，源于“一条大河波浪宽”，源于对中国人勤奋实干的钦佩。即使这种想法有明显的局限性，但我并没有改变的打算。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当加时加到66把的时候，队友已经疯了 &lt;a href=&#34;https://www.bilibili.com/video/BV1Ah4y1E7hN/&#34;&gt;视频&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好久没见过这么让人快乐的视频了。看不懂CSGO没关系，视频里面大家互相加油打气的氛围真的太好了。竞技游戏配置要求最高的不是显卡，而是朋友。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从群嘲到逆袭，《无畏契约》项目美术风格是如何确立的 &lt;a href=&#34;https://www.bilibili.com/video/BV1414y1d7V8&#34;&gt;视频&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最近沉迷打瓦，也思考过这个游戏为什么会这么火。这个视频很好地分析了Riot做游戏的思路：降低竞技游戏的入门门槛，有自己鲜明的美术特点，只提供必要的信息。当然Riot的电竞赛事运营也很牛，这就是另一件事了。&lt;/p&gt;
+- https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/ - </description>
+        </item>
     
     
     
