@@ -6,12 +6,12 @@
     <description>Recent content in typography on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 May 2019 12:13:38 +0530</lastBuildDate><atom:link href="https://www.wxgopher.cc/tags/typography/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 May 2019 12:13:38 +0530</lastBuildDate>
+    <atom:link href="https://www.wxgopher.cc/tags/typography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LaTeX与学术英文写作</title>
       <link>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</link>
       <pubDate>Wed, 01 May 2019 12:13:38 +0530</pubDate>
-      
       <guid>https://www.wxgopher.cc/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/</guid>
       <description>本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。
 LaTeX基础知识扫盲 Q：什么是LaTeX？它和TeX有什么区别？
@@ -34,17 +34,14 @@ A：两个原因。其一是TeX宏包一般都非常小，又非常多，初次�
 如果不知道从哪里开始，从LaTeX Templates下载一份自己喜欢的模板，开始写作~
 一些零碎的小技巧 开始写作之前建议先通读ltxprimer（文末参考文献），这本书只有100多页，可以扫清绝大多数使用TeX遇到的障碍； LaTeX可以用来制作幻灯片，使用Beamer类； 如果要批量OCR数学公式转换成TeX代码，可以使用Mathpix。这款软件是免费试用的； 类似于C++的#define，TeX有newcommmand/renewcommand； 非有必要，不要随意导入新的宏包：TeX由于历史遗留问题，宏包与宏包之间可能存在冲突； 爆栈网(stackoverflow)的TeX板块是最活跃的解决TeX问题的社区； 文献引用使用bibtex。查询引用文献可以用Google Scholar，搜索条目下面有bibtex格式。TeX Live默认配置了bibtex，只需要在文章中加入\bibliography{bibfile.bib}即可。详细的引用文献使用方法可以参考Overleaf的这个页面。 英文学术写作技巧 拿不准句子别扭不别扭，用Google搜一下； 不知道该使用的介词搭配，用英语语料库查一下（常用的英语语料库附在文末），一个使用的例子可以参考怎样利用COCA语料库提升英语用词水平？； 标点符号的使用可以参考Punctuation - English Grammar Today； 快速回顾英语语法和写作技巧参考文末附录。 推荐研读资料 LaTeX排版技术</description>
     </item>
-    
     <item>
       <title>Notes on ltxprimer</title>
       <link>https://www.wxgopher.cc/posts/notes_theltxprimer/</link>
       <pubDate>Sun, 01 May 2016 12:13:38 +0530</pubDate>
-      
       <guid>https://www.wxgopher.cc/posts/notes_theltxprimer/</guid>
       <description>Source: theltxprimer from Indian TeX group
 The basics Period: latex assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&amp;rsquo;t want this, so:
 In order to produce Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?, the correct input should be Carrots are good for your eyes, since they contain Vitamin A\@.</description>
     </item>
-    
   </channel>
 </rss>

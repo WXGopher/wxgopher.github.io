@@ -6,12 +6,12 @@
     <description>Recent content in collections on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2023 12:13:38 +0530</lastBuildDate><atom:link href="https://www.wxgopher.cc/categories/collections/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Aug 2023 12:13:38 +0530</lastBuildDate>
+    <atom:link href="https://www.wxgopher.cc/categories/collections/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>最近看了什么/2307</title>
       <link>https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/</link>
       <pubDate>Tue, 01 Aug 2023 12:13:38 +0530</pubDate>
-      
       <guid>https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/</guid>
       <description>新开一个专栏，讲讲最近看到的有意思的东西（书，文章，视频等等），随缘挑内容，随缘更新。
 想开这个专栏的主要原因是最近闲逛发现一篇非常好的课程笔记，然后翻了翻收藏夹发现了很多真的不错的东西收藏夹直接吃灰了，那么就让他们换一个地方吃灰，能帮到有缘人也是极好的。
@@ -25,6 +25,5 @@ Ted在SIGGRAPH 2022发的一篇课程笔记。做软体的大概率看过这里�
 从群嘲到逆袭，《无畏契约》项目美术风格是如何确立的 视频
 最近沉迷打瓦，也思考过这个游戏为什么会这么火。这个视频很好地分析了Riot做游戏的思路：降低竞技游戏的入门门槛，有自己鲜明的美术特点，只提供必要的信息。当然Riot的电竞赛事运营也很牛，这就是另一件事了。</description>
     </item>
-    
   </channel>
 </rss>

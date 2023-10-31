@@ -6,12 +6,12 @@
     <description>Recent content in about on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Aug 2023 12:13:38 +0530</lastBuildDate><atom:link href="https://www.wxgopher.cc/tags/about/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Aug 2023 12:13:38 +0530</lastBuildDate>
+    <atom:link href="https://www.wxgopher.cc/tags/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>最近看了什么/2307</title>
       <link>https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/</link>
       <pubDate>Tue, 01 Aug 2023 12:13:38 +0530</pubDate>
-      
       <guid>https://www.wxgopher.cc/posts/20230806_%E6%9C%80%E8%BF%91%E7%9C%8B%E4%BA%86%E4%BB%80%E4%B9%88/</guid>
       <description>新开一个专栏，讲讲最近看到的有意思的东西（书，文章，视频等等），随缘挑内容，随缘更新。
 想开这个专栏的主要原因是最近闲逛发现一篇非常好的课程笔记，然后翻了翻收藏夹发现了很多真的不错的东西收藏夹直接吃灰了，那么就让他们换一个地方吃灰，能帮到有缘人也是极好的。
@@ -25,12 +25,10 @@ Ted在SIGGRAPH 2022发的一篇课程笔记。做软体的大概率看过这里�
 从群嘲到逆袭，《无畏契约》项目美术风格是如何确立的 视频
 最近沉迷打瓦，也思考过这个游戏为什么会这么火。这个视频很好地分析了Riot做游戏的思路：降低竞技游戏的入门门槛，有自己鲜明的美术特点，只提供必要的信息。当然Riot的电竞赛事运营也很牛，这就是另一件事了。</description>
     </item>
-    
     <item>
       <title>建站小记</title>
       <link>https://www.wxgopher.cc/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</link>
       <pubDate>Wed, 15 Feb 2023 12:13:38 +0530</pubDate>
-      
       <guid>https://www.wxgopher.cc/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/</guid>
       <description>准备重开个人博客，希望跟世界建立更多的连接。网络上的帖子看了很多也折腾了许久，但是弱水三千只取一瓢，最后自己摸索出来的建站方案是各个帖子东拼西凑下来的。记录下来供有缘人参考。
 建站和写作 创建一个私人的Github 仓库（例如叫Hugo_Site），我采用的是Hugo。直接按照官方的指南安装即可。我使用的主题是Diary。将主题下载下来，放到themes目录中。
@@ -43,12 +41,10 @@ Ted在SIGGRAPH 2022发的一篇课程笔记。做软体的大概率看过这里�
 20230219更新：将网站同时部署到了cloudflare pages，提高国内的访问速度。域名设置重定向到cloudflare pages。如何设置只需要按照cloudflare手册操作即可。
 部署和SEO 我们每次写完博客以后必须本地hugo生成一下，然后手动Push /Public中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push Hugo_Site的时候自动触发网站构建并推送到Github Pages。</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>https://www.wxgopher.cc/about/</link>
       <pubDate>Sun, 12 Feb 2023 20:13:38 +0530</pubDate>
-      
       <guid>https://www.wxgopher.cc/about/</guid>
       <description>图片摄于加拿大班夫国家公园梦莲湖，我心目中最美丽的国家公园。
 The photo was captured at Moraine Lake, Banff National Park, Canada, the preeminent national park in my estimation.
@@ -57,12 +53,10 @@ I am a game engine developer and computer graphics enthusiast, with a perpetual 
 联系方式：wxguojlu 4t hotmail d0t com （将4t替换为@，d0t替换为.）
 Contact：wxguojlu 4t hotmail d0t com （Replace &amp;lsquo;4t&amp;rsquo; with &amp;lsquo;@&amp;rsquo;, and replace &amp;lsquo;d0t&amp;rsquo; with &amp;lsquo;.&amp;rsquo;）</description>
     </item>
-    
     <item>
       <title>Canada, Eh</title>
       <link>https://www.wxgopher.cc/posts/20190101_canada_eh/</link>
       <pubDate>Fri, 15 Feb 2019 12:13:38 +0530</pubDate>
-      
       <guid>https://www.wxgopher.cc/posts/20190101_canada_eh/</guid>
       <description>注：写一些不带个人身世（所以说是可以发表在公共场合）的东西。上中学的时候特别痴迷梁实秋的杂文，梁的文章常读常新，记得有一位语文老师跟我说过看似不经意的调侃的幽默是经历过了大风浪淬炼出来的，希望等我而立之年也能写出那样的文字。
 Sorry, eh, I&amp;rsquo;m Canadian Sorry是一个著名的梗。加拿大人是可以把sorry这个词用到几乎任何场合的：走路与别人擦肩而过，两人同时Sorry；跟陌生人打招呼问路，以Sorry开头……同样的道理，eh这个结尾语气词可以加在几乎任何句子的最后。 一图胜千言，上图：
@@ -82,6 +76,5 @@ Octolingual and illiterate Octolingual说的是我硕士老板，illiterate是�
 我素来都是羡慕出生在欧洲的人们的，天生就是bilingual甚至是trilingual。前阵子有一个厄瓜多尔的使团来到我们组访问（厄瓜多尔说西班牙语），当时配了一位英西翻译负责把我们说的（各种口音的）英语翻译成西语。使团走了以后我们组的意大利妹子非常兴奋地说“我虽然不会说西语但是他们说的每句话我差不多都能理解”。是呀，西语法语意大利语这些拉丁语族的语言某些部分都是非常相似的。multilingual的好处不仅在于能听懂多门语言，甚至还能对写作产生影响。想起来上周组会的时候，老板提到合成形容词为什么要加hyphen的时候是这么开场的“如果你们会德语的话……”
 英语非常烂的我有这这样一位picky的老板自然没少吃瘪，我至今记得第一次看我老板给我改的材料我恨不得羞愧到找个地缝钻进去——几乎每一个句子都有问题，从punctuation，到hyphen/em-dash/en-dash（一度以为我老板长了双写轮眼，这三种短横的长度都能区分开来），到介词和冠词，让我感觉我人生的前20年几乎没有学过英语；计算机系另一位教授也在给我的评语中建议我去上一门语言课。经历过一系列让我羞愧难当的事情以后我决定好好补习一下我的英语。当时看到有一位老师（Mrs. McWhinney）在组织一个迷你的语法温习课，就报名参加了。不得不说native speaker教第二外语能很敏锐抓住国际生常犯的错误，第一节课讲punctuation的时候成功加深了我前20年确实等于没学过英语的感觉……McWhinney夫人发给我们的笔记我现在还会时常拿出来温习，常读常新。顺带提一句，Mrs.</description>
     </item>
-    
   </channel>
 </rss>
