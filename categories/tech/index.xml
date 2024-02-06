@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech on wxgopher</title>
+    <link>https://www.wxgopher.cc/categories/tech/</link>
+    <description>Recent content in tech on wxgopher</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Feb 2024 12:13:38 +0530</lastBuildDate>
+    <atom:link href="https://www.wxgopher.cc/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chromium开发0x01作</title>
+      <link>https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 02 Feb 2024 12:13:38 +0530</pubDate>
+      <guid>https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/</guid>
+      <description>源码来自2024年1月的Chromium仓库。&#xA;编译相关 下载拉取代码按照教程来做即可：https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md#get-the-code&#xA;自备梯子xD&#xA;注意，不需要验证python环境变量，把depot_tools设置在PATH的第一位就没问题了。&#xA;生成vs工程和Build target，这样会在out\Defualt目录下生成all.sln：&#xA;gn gen --ide=vs --filters=//chrome out\Default 编译：&#xA;autoninja -C out\Default chrome 编译要求至少32G内存（否则会OOM），16C32T的CPU大概要编2-3小时，泡一杯咖啡开始摸鱼。&#xA;环境配置/Debug 推荐使用宇宙第一IDE Visual Studio进行调试，使用Visual Studio Code看代码。&#xA;Visual Studio 确保已经生成了vs工程，否则返回看上节。&#xA;第一次打开all.sln大概要生成5G以上的intellisense文件，需要10-20分钟，取决于电脑配置，这个时候看起来像假死，但是千万不要杀进程，耐心等待即可。&#xA;在感兴趣的位置挂断点，把Chrome\Chrome这个工程设置为启动工程，起调试器。这个时候会提示无法Build（因为Chromium的build系统是ninja，现在VS没有很好的支持），是否用上次成功的Build，点是即可快乐调试~&#xA;推荐安装以下几个插件：&#xA;github copilot, File Path On Footer, VsColorOutput64。&#xA;Happy debugging~&#xA;Visual Studio Code Chromium推荐使用clangd作为LSP。&#xA;从llvm的官方网站安装clangd，vscode的插件安装vscode-clangd，C/C++； 生成clangd的compilation db：打开python3的anaconda控制台（或者任意Python3环境）,cd到Chromium/src，执行 python tools/clang/scripts/generate_compdb.py -p out/Default &amp;gt; compile_commands.json； cd到Chromium/src，右键“使用code打开”，会提示intellisense和clangd冲突，是否禁用intellisense，禁用即可； enjoy~ 查文档的一些奇技淫巧 Chromium的文档主要有以下几处：&#xA;设计文档：https://www.chromium.org/developers/design-documents/； 官方推荐的技能树：https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code/#a-personal-learning-plan； 内部文档：直接在仓库中搜索关键字，文件类型选*.md，本机没有代码没关系，看这里https://source.chromium.org/chromium； 直接搜代码，代码中有非常多的宝藏评论，用正则搜。最简单的正则：keyword1.*keyword2，搜索文件类型*.cc,*.h，可以匹配所有一行中包括keyword1和keyword2（按顺序）的源码。 Refs 需要用到的几个文档：&#xA;vscode 配置clangd https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md windows下从源码构建 https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md </description>
+    </item>
+  </channel>
+</rss>
