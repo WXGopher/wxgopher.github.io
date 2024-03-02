@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html><head>
-<title>Notes on ltxprimer</title>
+<html lang="en-us">
+
+<head>
+  
+  <meta charset="utf-8">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
-<meta property="og:title" content="Notes on ltxprimer" />
-<meta property="og:description" content="Source: theltxprimer from Indian TeX group
+  
+    <meta name="description" content="Source: theltxprimer from Indian TeX group
 The basics Period: latex assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&rsquo;t want this, so:
-In order to produce Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?, the correct input should be Carrots are good for your eyes, since they contain Vitamin A\@." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.wxgopher.cc/posts/notes_theltxprimer/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2016-05-01T12:13:38+05:30" />
-<meta property="article:modified_time" content="2016-05-01T12:13:38+05:30" /><meta property="og:site_name" content="wxgopher" />
+In order to produce Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?, the correct input should be Carrots are good for your eyes, since they contain Vitamin A\@.">
+  
 
 
-
-
-
-
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Notes on ltxprimer"/>
-<meta name="twitter:description" content="Source: theltxprimer from Indian TeX group
-The basics Period: latex assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&rsquo;t want this, so:
-In order to produce Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?, the correct input should be Carrots are good for your eyes, since they contain Vitamin A\@."/>
+<meta name="color-scheme" content="light dark">
 
 
 
@@ -41,6 +25,9 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 
 
 
+<meta name="generator" content="Hugo 0.122.0">
+  <title>Notes on ltxprimer | wxgopher</title>
+  <link rel="canonical" href="https://www.wxgopher.cc/posts/notes_theltxprimer/">
 
 
 
@@ -52,600 +39,98 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 
 
 
-      <script src="/js/toc.js"></script>
+
+
+  
     
-    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
-
-
-<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Material+Icons">
+  
+  
+      <link rel="stylesheet" href="/css/base.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.css" integrity="sha256-VD2cTuzvIQ19bDxCz8t6SHAYcXkky6BJaWWx/9Ll8uI=" crossorigin="anonymous">
 
 
-
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        renderMathInElement(document.body, {
-          
-          
-          delimiters: [
-              {left: '$$', right: '$$', display: true},
-              {left: '$', right: '$', display: false},
-              {left: '\\(', right: '\\)', display: false},
-              {left: '\\[', right: '\\]', display: true}
-          ],
-          
-          throwOnError : false
-        });
-    });
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>console.log("Hello from 'layouts/partials/extended_head.html'")</script>
 
 </head>
+
 <body>
-    	<div id="app"><div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-                
-                
-                
-                    
-                
-                
-                
-                <a class="a-block drawer-menu-item active" href="/posts">
-                    Archive
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories">
-                    Categories
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/tags">
-                    Tags
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/index.xml">
-                    RSS Feed
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/about/">
-                    About
-                </a>
-                
-            
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- 目录 -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#the-basics" class="nav-the-basics">
-									The basics
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#period" class="nav-period">
-									Period:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#quotes" class="nav-quotes">
-									Quotes:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#hyphenation" class="nav-hyphenation">
-									Hyphenation:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#accents" class="nav-accents">
-									Accents:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#fonts" class="nav-fonts">
-									Fonts
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#document" class="nav-document">
-									Document
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#page-format" class="nav-page-format">
-									Page format
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#page-style" class="nav-page-style">
-									Page style
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#forming-a-document" class="nav-forming-a-document">
-									Forming a document
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#bibliography" class="nav-bibliography">
-									Bibliography
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#table-of-contents-index-and-glossary" class="nav-table-of-contents-index-and-glossary">
-									Table of contents, index and glossary
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#displayed-text" class="nav-displayed-text">
-									Displayed text
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#rows-and-columns" class="nav-rows-and-columns">
-									Rows and columns
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#mathematics" class="nav-mathematics">
-									Mathematics
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#boxes" class="nav-boxes">
-									Boxes
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#floats" class="nav-floats">
-									Floats
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#cross-references" class="nav-cross-references">
-									Cross references
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#footnotes-marginpars-and-endnotes" class="nav-footnotes-marginpars-and-endnotes">
-									Footnotes, marginpars, and endnotes
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://www.wxgopher.cc/">
-            wxgopher
-        </a>
+  <nav class="u-background">
+  <div class="u-wrapper">
+    <ul class="Banner">
+      <li class="Banner-item Banner-item--title">
+        <h1 class="Banner-heading">
+          <a class="Banner-link u-clickable" href="/">wxgopher</a>
+        </h1>
+      </li>
+      
         
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
         
-    </div>
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/posts">Posts</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/tags">Tags</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/index.xml">RSS Feed</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://www.wxgopher.cc/">
-        <div class="single-column-header-title">wxgopher</div>
-        
-        <div class="single-column-header-subtitle">日拱一卒，功不唐捐。</div>
+
+  <main>
+    <div class="u-wrapper">
+      <div class="u-padding">
         
 
-    </a>
-</div>
-
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
-
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
-
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    Notes on ltxprimer
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2016-05-01 12:13
-                        </time>
-                        
-
-                        
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/misc">misc</a>
-                                &nbsp;
-                        
-
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <p>Source: theltxprimer from Indian TeX group</p>
-<h3 id="the-basics">The basics</h3>
-<h4 id="period">Period:</h4>
+  <article>
+    <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/" rel="bookmark">Notes on ltxprimer</a>
+  </h2>
+  
+    <time datetime="2016-05-01T12:13:38&#43;05:30">2016年5月1日</time>
+  
+</header>
+    <p>Source: theltxprimer from Indian TeX group</p>
+<h3 id="the-basics">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#the-basics">The basics</a>
+</h3>
+<h4 id="period">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#period">Period:</a>
+</h4>
 <p><code>latex</code> assumes each period not following an upper case letter ends a sentence. In traditional typesetting, an extra little space is appended. Sometimes we don&rsquo;t want this, so:</p>
 <p>In order to produce
 <code>Carrots are good for your eyes, since they contain Vitamin A. Have you ever seen a rabbit wearing glasses?</code>, the correct input should be <code>Carrots are good for your eyes, since they contain Vitamin A\@. Have you ever seen a rabbit wearing glasses?</code>.</p>
 <p>To produce
 <code>The numbers 1, 2, 3, etc. are called natural numbers. According to Kronecker, they were made by God; all else being the work of Man.</code>, the correct input should be <code>The numbers 1, 2, 3, etc.\ are called natural numbers. According to Kronecker, they were made by God;all else being the works of Man.</code>.</p>
-<h4 id="quotes">Quotes:</h4>
+<h4 id="quotes">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#quotes">Quotes:</a>
+</h4>
 <p>To produce &ldquo;&rdquo;, input <code>``</code> and <code>''</code>, or use <code>\lq</code> and <code>\rq</code> instead.</p>
-<h4 id="hyphenation">Hyphenation:</h4>
+<h4 id="hyphenation">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#hyphenation">Hyphenation:</a>
+</h4>
 <ul>
 <li>Hyphen (<code>-</code>): separating compound names. e.g., Munthe-Kaas;</li>
 <li>Compound nouns are not hyphenated, but compound adjectives are; e.g., Lie group as opposed to Lie-group method. Compound adjectives that use adverbs are not hyphenated; e.g., &ldquo;diagonally implicit method&rdquo; is correct;</li>
 <li><code>--</code> (em-dash): used between two people, e.g., Runge&ndash;Kutta;</li>
 <li><code>---</code> (en-dash): connects things that are related to each other by distance, as in the <code>May–September issue of a magazine</code>.</li>
 </ul>
-<h4 id="accents">Accents:</h4>
+<h4 id="accents">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#accents">Accents:</a>
+</h4>
 <p><code>Él está aquı́</code>, input <code>\’{E}l est\’{a} aqu\’{\i}</code>.</p>
 <p>Some special symbols:</p>
 <table>
@@ -670,20 +155,28 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 </tr>
 </tbody>
 </table>
-<h4 id="fonts">Fonts</h4>
+<h4 id="fonts">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#fonts">Fonts</a>
+</h4>
 <p>Style (roman, sans serif, etc.), series (medium, boldface, etc.), shape (upright, italic, etc.)</p>
 <p>Declaration (<code>\upshape</code>) and command (<code>\textup{}</code>). The declaration can be used as enviroment names.</p>
 <p>Optional arguments are inclosed in <code>[]</code>, and mandatory arguments are inclosed in <code>()</code>.</p>
-<h3 id="document">Document</h3>
+<h3 id="document">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#document">Document</a>
+</h3>
 <hr>
-<h4 id="page-format">Page format</h4>
+<h4 id="page-format">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#page-format">Page format</a>
+</h4>
 <ul>
 <li>onecolumn/twocolumn</li>
 <li>oneside/twoside (affects position of page number)</li>
 <li>openany(chapters begin on “any” new page)/openright(chapters begin only on new right , that is, odd numbered, page)</li>
 <li>notitlepage/titlepage (whether to separate title page)</li>
 </ul>
-<h4 id="page-style">Page style</h4>
+<h4 id="page-style">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#page-style">Page style</a>
+</h4>
 <ul>
 <li>
 <p><code>\pagestyle{...},\thispagestyle{...}</code></p>
@@ -701,7 +194,9 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 <p><code>\setcounter{page}{ number }</code></p>
 </li>
 </ul>
-<h4 id="forming-a-document">Forming a document</h4>
+<h4 id="forming-a-document">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#forming-a-document">Forming a document</a>
+</h4>
 <ul>
 <li><code>\and</code> helps you to put authors parallel</li>
 <li>A proper hierarchy:\chapter\section\subsection\subsubsection\paragraph\subparagraph</li>
@@ -709,14 +204,18 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 <li>A detailed structure, see P24 and 25</li>
 <li><a href="https://tex.stackexchange.com/questions/82664/when-to-use-par-and-when-or-blank-lines">\Par and &ldquo;\&quot;</a></li>
 </ul>
-<h3 id="bibliography">Bibliography</h3>
+<h3 id="bibliography">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#bibliography">Bibliography</a>
+</h3>
 <hr>
 <ul>
 <li>Bib style packages: harvard, natbib</li>
 <li>With <code>\nocite{*}</code> , every entry in all the databases will be included, something that is useful when producing a list of all entries and their keys.</li>
 <li><code>aux</code>: reference auxiliary; <code>bib</code>: original bib; <code>bst</code>: bib style; <code>bbl</code> formatted bib; <code>blg</code>: log</li>
 </ul>
-<h3 id="table-of-contents-index-and-glossary">Table of contents, index and glossary</h3>
+<h3 id="table-of-contents-index-and-glossary">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#table-of-contents-index-and-glossary">Table of contents, index and glossary</a>
+</h3>
 <hr>
 <ul>
 <li>
@@ -744,7 +243,9 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 <p><code>\makeglossary</code> to make glossary (<code>*.glo</code> file)</p>
 </li>
 </ul>
-<h3 id="displayed-text">Displayed text</h3>
+<h3 id="displayed-text">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#displayed-text">Displayed text</a>
+</h3>
 <hr>
 <ul>
 <li>Quotation <code>\begin{quote} \end{quote}</code> or (for multiple paragraphs) <code>\begin{quotation} \end{quotation}</code></li>
@@ -754,7 +255,9 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 <li><code>\renewcommand{\descriptionlabel}[1]{\hspace{1cm}\textsf{#1}}</code> example to customize description</li>
 <li><code>enumerate</code> can also include description</li>
 </ul>
-<h3 id="rows-and-columns">Rows and columns</h3>
+<h3 id="rows-and-columns">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#rows-and-columns">Rows and columns</a>
+</h3>
 <hr>
 <ul>
 <li>
@@ -771,6 +274,7 @@ In order to produce Carrots are good for your eyes, since they contain Vitamin A
 </li>
 <li>
 <p>Use <code>r@{--}l</code> for range. Example:</p>
+
 <pre tabindex="0"><code>\begin{center}
 \begin{tabular}{|c|r@{--}l|}
 \hline
@@ -786,13 +290,15 @@ Height &amp; \multicolumn{2}{c|}{Ideal weight}\\
 &amp; 92.5\\
 \hline
 \end{tabular}
-\end{center}
-</code></pre></li>
+\end{center}</code></pre>
+</li>
 <li>
 <p>Enhancement: <code>array</code>, <code>multirow</code>, <code>multicol</code>, <code>longtable</code>, <code>hhline</code>, <code>delarray</code>, <code>tabularx</code> etc.</p>
 </li>
 </ul>
-<h3 id="mathematics">Mathematics</h3>
+<h3 id="mathematics">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#mathematics">Mathematics</a>
+</h3>
 <hr>
 <ul>
 <li>
@@ -815,9 +321,10 @@ Height &amp; \multicolumn{2}{c|}{Ideal weight}\\
 </li>
 <li>
 <p>Binary operator:<code>\mathbin</code>; relation operator: <code>\mathrel</code></p>
+
 <pre tabindex="0"><code>x\Box y % produces x\Boxy
-x\mathbin\Box y % produces x \Box y
-</code></pre></li>
+x\mathbin\Box y % produces x \Box y</code></pre>
+</li>
 <li>
 <p><code>\newcommand{\vect}[1]{(#1_1,#1_2,\dots,#1_n)}% use \vect{sth}</code> will substitute 1 to sth (2 and #2, 3 and #3&hellip; is the same)</p>
 </li>
@@ -834,6 +341,7 @@ x\mathbin\Box y % produces x \Box y
 <p>An example: gather two groups of equations together</p>
 <ul>
 <li>
+
 <pre tabindex="0"><code>\begin{equation*}
 	\begin{aligned}
 		\cosˆ2x+sinˆ2x &amp; = 1\\
@@ -844,8 +352,8 @@ x\mathbin\Box y % produces x \Box y
 		\coshˆ2x-\sinhˆ2x &amp; = 1\\
 		\coshˆ2x+\sinhˆ2x &amp; = \cosh 2x
 	\end{aligned}
-\end{equation*}
-</code></pre></li>
+\end{equation*}</code></pre>
+</li>
 </ul>
 </li>
 <li>
@@ -893,7 +401,9 @@ x\mathbin\Box y % produces x \Box y
 <p>Customized theorem: <code>amsthm</code> package</p>
 </li>
 </ul>
-<h3 id="boxes">Boxes</h3>
+<h3 id="boxes">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#boxes">Boxes</a>
+</h3>
 <hr>
 <ul>
 <li>
@@ -911,12 +421,13 @@ x\mathbin\Box y % produces x \Box y
 <p>LR boxes:</p>
 <ul>
 <li>
+
 <pre tabindex="0"><code>\mbox{ text } % without frame
 \makebox{ width }{ pos }{ text } % without frame
 \fbox{ text } % with frame
 \framebox{ width }{ pos }{ text } % with frame
-% pos arguments: l for left, r for right, c for center, s for stretch (in-text spaces)
-</code></pre></li>
+% pos arguments: l for left, r for right, c for center, s for stretch (in-text spaces)</code></pre>
+</li>
 <li>
 <p><code>\fboxrule</code>, <code>\fboxsep</code>, and<code>\raisebox</code> for determining frame style, box positions(or rotations)</p>
 </li>
@@ -938,20 +449,23 @@ x\mathbin\Box y % produces x \Box y
 </blockquote>
 </li>
 </ul>
-<h3 id="floats">Floats</h3>
+<h3 id="floats">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#floats">Floats</a>
+</h3>
 <hr>
 <ul>
 <li>
 <p>Figures:</p>
 </li>
 <li>
+
 <pre tabindex="0"><code>\begin{figure}
 	\includegraphics{figure.eps}
 	\caption{This is an inserted EPS graphic} 
 	% use \caption[lof]{description} to produce concise description in list of figures
 	\label{fig1}
-\end{figure}
-</code></pre><ul>
+\end{figure}</code></pre>
+<ul>
 <li>Figures are not allowed in boxes (<code>\parbox</code> or <code>minipage</code>)</li>
 <li>Positional arguments: h for here, t for top, b for bottom and p for page containing only floats (default <code>[tbp]</code>)</li>
 <li><code>\clearpage</code> : This command places unprocessed floats and starts a new page.</li>
@@ -1012,7 +526,9 @@ x\mathbin\Box y % produces x \Box y
 </ul>
 </li>
 </ul>
-<h3 id="cross-references">Cross references</h3>
+<h3 id="cross-references">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#cross-references">Cross references</a>
+</h3>
 <hr>
 <ul>
 <li>&ldquo;cross&rdquo; means both backward AND  forward</li>
@@ -1022,7 +538,9 @@ x\mathbin\Box y % produces x \Box y
 <li>Package <code>varioref</code> (<code>\vref{key}</code>) produces &ldquo;full&rdquo; reference (position, page number, etc.) using some rules.  (produce <code>ref</code> and/or <code>\pageref</code> depending on the current page)</li>
 <li>Use package <code>xr</code> for external reference: <code>\usepackage{xr} \externaldocument{ other.tex }</code></li>
 </ul>
-<h3 id="footnotes-marginpars-and-endnotes">Footnotes, marginpars, and endnotes</h3>
+<h3 id="footnotes-marginpars-and-endnotes">
+  <a class="Heading-link u-clickable" href="/posts/notes_theltxprimer/#footnotes-marginpars-and-endnotes">Footnotes, marginpars, and endnotes</a>
+</h3>
 <hr>
 <ul>
 <li>Use <code>tabularx</code>, <code>longtable</code> or wrap <code>tabular</code> in <code>minipage</code> if you want to use footnote inside a <code>tabular</code>. Another package called <code>threeparttable</code> is also helpful.</li>
@@ -1032,576 +550,62 @@ x\mathbin\Box y % produces x \Box y
 <li>Package <code>endnotes</code> for endnotes.</li>
 </ul>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">最后修改于 2016-05-01</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="/posts/20190101_canada_eh/">
-			下回<br>Canada, Eh
-                </a>
-                
-                
-                
-                <a class="older-posts">
-			上回<br>这是最旧的文章了。
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://giscus.app/client.js"
-        data-repo=""
-        data-repo-id=""
-        data-category=""
-        data-category-id=""
-        data-mapping=""
-        data-strict=""
-        data-reactions-enabled=""
-        data-emit-metadata=""
-        data-input-position=""
-        data-theme=""
-        data-lang=""
-        crossorigin=""
-        async>
-</script>
-
-            </div>
-        </div>
-    </div>
-
-
-                    </div>
-            </div><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://www.wxgopher.cc/">
-    
-        <div class="nav-title">
-            wxgopher
-        </div>
-        
-        <div class="nav-subtitle">
-            日拱一卒，功不唐捐。
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-            
-            
-            
-                
-            
-            
-            
-            <a class="a-block nav-link-item active" href="/posts">
-                Archive
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories">
-                Categories
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/tags">
-                Tags
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/index.xml">
-                RSS Feed
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/about/">
-                About
-            </a>
-            
-        
-    </div>
-
     
 
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
+  
 
-&copy;
-	
-	2024 wxgopher
-	
+  
 
-    </div>
+
+
+
+
+  <footer>
     
-</div><div id="extraContainer" class="extra-container">
-    <div class="toc-wrapper">
-        
-
-        
-        <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- 目录 -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#the-basics" class="nav-the-basics">
-									The basics
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#period" class="nav-period">
-									Period:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#quotes" class="nav-quotes">
-									Quotes:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#hyphenation" class="nav-hyphenation">
-									Hyphenation:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#accents" class="nav-accents">
-									Accents:
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#fonts" class="nav-fonts">
-									Fonts
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#document" class="nav-document">
-									Document
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#page-format" class="nav-page-format">
-									Page format
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#page-style" class="nav-page-style">
-									Page style
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#forming-a-document" class="nav-forming-a-document">
-									Forming a document
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#bibliography" class="nav-bibliography">
-									Bibliography
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#table-of-contents-index-and-glossary" class="nav-table-of-contents-index-and-glossary">
-									Table of contents, index and glossary
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#displayed-text" class="nav-displayed-text">
-									Displayed text
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#rows-and-columns" class="nav-rows-and-columns">
-									Rows and columns
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#mathematics" class="nav-mathematics">
-									Mathematics
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#boxes" class="nav-boxes">
-									Boxes
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#floats" class="nav-floats">
-									Floats
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#cross-references" class="nav-cross-references">
-									Cross references
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#footnotes-marginpars-and-endnotes" class="nav-footnotes-marginpars-and-endnotes">
-									Footnotes, marginpars, and endnotes
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-        
-    </div>
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
-            :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2024 wxgopher
-	
-</div>
-            </div>
+      
+        <ul class="Tags">
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/categories/misc/" rel="tag">misc</a>
+            </li>
+          
+        </ul>
+      
     
-    <script src="/js/journal.js"></script></body>
+      
+        <ul class="Tags">
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/tags/typography/" rel="tag">typography</a>
+            </li>
+          
+        </ul>
+      
+    
+  </footer>
+
+    
+  
+    
+    
+    <script src="https://utteranc.es/client.js" data-repo="your repo" data-issue-term="pathname" data-theme="github-light" crossorigin="anonymous" async></script>
+  
+
+  </article>
+
+
+      </div>
+    </div>
+  </main>
+  
+  <footer class="Footer">
+    <div class="u-wrapper">
+      <div class="u-padding u-noboosting">
+        Except where otherwise noted, content on this site is licensed under a &#32; <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>

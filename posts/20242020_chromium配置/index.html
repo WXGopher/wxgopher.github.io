@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html><head>
-<title>Chromium开发0x01</title>
+<html lang="en-us">
+
+<head>
+  
+  <meta charset="utf-8">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
-<meta property="og:title" content="Chromium开发0x01" />
-<meta property="og:description" content="Chromium开发0x01 源码来自2024年1月的Chromium仓库。
+  
+    <meta name="description" content="Chromium开发0x01 源码来自2024年1月的Chromium仓库。
 编译相关 下载拉取代码按照教程来做即可：https://chromium.googlesource.com/chromium/src/&#43;/main/docs/windows_build_instructions.md#get-the-code
 自备梯子xD
 注意，不需要验证python环境变量，把depot_tools设置在PATH的第一位就没问题了。
@@ -33,35 +27,11 @@ github copilot, File Path On Footer, VsColorOutput64。
 Happy debugging~
 Visual Studio Code Chromium推荐使用clangd作为LSP。
 从llvm的官方网站安装clangd，vscode的插件安装vscode-clangd，C/C&#43;&#43;； 生成clangd的compilation db：打开python3的anaconda控制台（或者任意Python3环境）,cd到Chromium/src，执行 python tools/clang/scripts/generate_compdb.py -p out/Default &gt; compile_commands.json； cd到Chromium/src，右键“使用code打开”，会提示intellisense和clangd冲突，是否禁用intellisense，禁用即可； enjoy~ 查文档的一些奇技淫巧 Chromium的文档主要有以下几处：
-设计文档：https://www.chromium.org/developers/design-documents/； 官方推荐的技能树：https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code/#a-personal-learning-plan； 内部文档：直接在仓库中搜索关键字，文件类型选*.md，本机没有代码没关系，看这里https://source.chromium.org/chromium； 直接搜代码，代码中有非常多的宝藏评论，用正则搜。最简单的正则：keyword1.*keyword2，搜索文件类型*.cc,*.h，可以匹配所有一行中包括keyword1和keyword2（按顺序）的源码。 Debug 由于Chromium的进程非常多，调试比较麻烦。如果是VS，可以使用Microsoft Child Process Debugging Power Tool 2022这个VS extension，可以自动将断点挂到其他进程。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-01T12:13:38+05:30" />
-<meta property="article:modified_time" content="2024-01-01T12:13:38+05:30" /><meta property="og:site_name" content="wxgopher" />
+设计文档：https://www.chromium.org/developers/design-documents/； 官方推荐的技能树：https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code/#a-personal-learning-plan； 内部文档：直接在仓库中搜索关键字，文件类型选*.md，本机没有代码没关系，看这里https://source.chromium.org/chromium； 直接搜代码，代码中有非常多的宝藏评论，用正则搜。最简单的正则：keyword1.*keyword2，搜索文件类型*.cc,*.h，可以匹配所有一行中包括keyword1和keyword2（按顺序）的源码。 Debug 由于Chromium的进程非常多，调试比较麻烦。如果是VS，可以使用Microsoft Child Process Debugging Power Tool 2022这个VS extension，可以自动将断点挂到其他进程。">
+  
 
 
-
-
-
-
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Chromium开发0x01"/>
-<meta name="twitter:description" content="Chromium开发0x01 源码来自2024年1月的Chromium仓库。
-编译相关 下载拉取代码按照教程来做即可：https://chromium.googlesource.com/chromium/src/&#43;/main/docs/windows_build_instructions.md#get-the-code
-自备梯子xD
-注意，不需要验证python环境变量，把depot_tools设置在PATH的第一位就没问题了。
-生成vs工程和Build target，这样会在out\Defualt目录下生成all.sln：
-gn gen --ide=vs --filters=//chrome out\Default 编译：
-autoninja -C out\Default chrome 编译要求至少32G内存（否则会OOM），16C32T的CPU大概要编2-3小时，泡一杯咖啡开始摸鱼。
-环境配置/Debug 推荐使用宇宙第一IDE Visual Studio进行调试，使用Visual Studio Code看代码。
-Visual Studio 确保已经生成了vs工程，否则返回看上节。
-第一次打开all.sln大概要生成5G以上的intellisense文件，需要10-20分钟，取决于电脑配置，这个时候看起来像假死，但是千万不要杀进程，耐心等待即可。
-在感兴趣的位置挂断点，把Chrome\Chrome这个工程设置为启动工程，起调试器。这个时候会提示无法Build（因为Chromium的build系统是ninja，现在VS没有很好的支持），是否用上次成功的Build，点是即可快乐调试~
-推荐安装以下几个插件：
-github copilot, File Path On Footer, VsColorOutput64。
-Happy debugging~
-Visual Studio Code Chromium推荐使用clangd作为LSP。
-从llvm的官方网站安装clangd，vscode的插件安装vscode-clangd，C/C&#43;&#43;； 生成clangd的compilation db：打开python3的anaconda控制台（或者任意Python3环境）,cd到Chromium/src，执行 python tools/clang/scripts/generate_compdb.py -p out/Default &gt; compile_commands.json； cd到Chromium/src，右键“使用code打开”，会提示intellisense和clangd冲突，是否禁用intellisense，禁用即可； enjoy~ 查文档的一些奇技淫巧 Chromium的文档主要有以下几处：
-设计文档：https://www.chromium.org/developers/design-documents/； 官方推荐的技能树：https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code/#a-personal-learning-plan； 内部文档：直接在仓库中搜索关键字，文件类型选*.md，本机没有代码没关系，看这里https://source.chromium.org/chromium； 直接搜代码，代码中有非常多的宝藏评论，用正则搜。最简单的正则：keyword1.*keyword2，搜索文件类型*.cc,*.h，可以匹配所有一行中包括keyword1和keyword2（按顺序）的源码。 Debug 由于Chromium的进程非常多，调试比较麻烦。如果是VS，可以使用Microsoft Child Process Debugging Power Tool 2022这个VS extension，可以自动将断点挂到其他进程。"/>
+<meta name="color-scheme" content="light dark">
 
 
 
@@ -69,6 +39,9 @@ Visual Studio Code Chromium推荐使用clangd作为LSP。
 
 
 
+<meta name="generator" content="Hugo 0.122.0">
+  <title>Chromium开发0x01 | wxgopher</title>
+  <link rel="canonical" href="https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/">
 
 
 
@@ -80,371 +53,103 @@ Visual Studio Code Chromium推荐使用clangd作为LSP。
 
 
 
-      <script src="/js/toc.js"></script>
+
+
+  
     
-    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
-
-
-<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Material+Icons">
+  
+  
+      <link rel="stylesheet" href="/css/base.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.css" integrity="sha256-VD2cTuzvIQ19bDxCz8t6SHAYcXkky6BJaWWx/9Ll8uI=" crossorigin="anonymous">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>console.log("Hello from 'layouts/partials/extended_head.html'")</script>
 
 </head>
+
 <body>
-    	<div id="app"><div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-                
-                
-                
-                    
-                
-                
-                
-                <a class="a-block drawer-menu-item active" href="/posts">
-                    Archive
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories">
-                    Categories
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/tags">
-                    Tags
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/index.xml">
-                    RSS Feed
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/about/">
-                    About
-                </a>
-                
-            
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- 目录 -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#chromium%e5%bc%80%e5%8f%910x01" class="nav-chromium开发0x01">
-									Chromium开发0x01
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e7%bc%96%e8%af%91%e7%9b%b8%e5%85%b3" class="nav-编译相关">
-									编译相关
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%aedebug" class="nav-环境配置debug">
-									环境配置/Debug
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#visual-studio" class="nav-visual-studio">
-									Visual Studio
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#visual-studio-code" class="nav-visual-studio-code">
-									Visual Studio Code
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e6%9f%a5%e6%96%87%e6%a1%a3%e7%9a%84%e4%b8%80%e4%ba%9b%e5%a5%87%e6%8a%80%e6%b7%ab%e5%b7%a7" class="nav-查文档的一些奇技淫巧">
-									查文档的一些奇技淫巧
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#debug" class="nav-debug">
-									Debug
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#refs" class="nav-refs">
-									Refs
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://www.wxgopher.cc/">
-            wxgopher
-        </a>
+  <nav class="u-background">
+  <div class="u-wrapper">
+    <ul class="Banner">
+      <li class="Banner-item Banner-item--title">
+        <h1 class="Banner-heading">
+          <a class="Banner-link u-clickable" href="/">wxgopher</a>
+        </h1>
+      </li>
+      
         
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
         
-    </div>
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/posts">Posts</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/tags">Tags</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/index.xml">RSS Feed</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://www.wxgopher.cc/">
-        <div class="single-column-header-title">wxgopher</div>
-        
-        <div class="single-column-header-subtitle">日拱一卒，功不唐捐。</div>
+
+  <main>
+    <div class="u-wrapper">
+      <div class="u-padding">
         
 
-    </a>
-</div>
-
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
-
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
-
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    Chromium开发0x01
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2024-01-01 12:13
-                        </time>
-                        
-
-                        
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/tech">tech</a>
-                                &nbsp;
-                        
-
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <h1 id="chromium开发0x01">Chromium开发0x01</h1>
+  <article>
+    <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/" rel="bookmark">Chromium开发0x01</a>
+  </h2>
+  
+    <time datetime="2024-01-01T12:13:38&#43;05:30">2024年1月1日</time>
+  
+</header>
+    <h1 id="chromium开发0x01">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#chromium%e5%bc%80%e5%8f%910x01">Chromium开发0x01</a>
+</h1>
 <p>源码来自2024年1月的Chromium仓库。</p>
-<h2 id="编译相关">编译相关</h2>
+<h2 id="编译相关">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#%e7%bc%96%e8%af%91%e7%9b%b8%e5%85%b3">编译相关</a>
+</h2>
 <p>下载拉取代码按照教程来做即可：https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md#get-the-code</p>
 <p>自备梯子xD</p>
 <p>注意，不需要验证<code>python</code>环境变量，把<code>depot_tools</code>设置在PATH的第一位就没问题了。</p>
 <p>生成vs工程和Build target，这样会在<code>out\Defualt</code>目录下生成<code>all.sln</code>：</p>
-<pre tabindex="0"><code>gn gen --ide=vs --filters=//chrome out\Default
-</code></pre><p>编译：</p>
-<pre tabindex="0"><code>autoninja -C out\Default chrome
-</code></pre><p>编译要求至少32G内存（否则会OOM），16C32T的CPU大概要编2-3小时，泡一杯咖啡开始摸鱼。</p>
-<h2 id="环境配置debug">环境配置/Debug</h2>
+
+<pre tabindex="0"><code>gn gen --ide=vs --filters=//chrome out\Default</code></pre>
+<p>编译：</p>
+
+<pre tabindex="0"><code>autoninja -C out\Default chrome</code></pre>
+<p>编译要求至少32G内存（否则会OOM），16C32T的CPU大概要编2-3小时，泡一杯咖啡开始摸鱼。</p>
+<h2 id="环境配置debug">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%aedebug">环境配置/Debug</a>
+</h2>
 <p>推荐使用宇宙第一IDE Visual Studio进行调试，使用Visual Studio Code看代码。</p>
-<h3 id="visual-studio">Visual Studio</h3>
+<h3 id="visual-studio">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#visual-studio">Visual Studio</a>
+</h3>
 <p>确保已经生成了vs工程，否则返回看上节。</p>
 <p>第一次打开<code>all.sln</code>大概要生成5G以上的intellisense文件，需要10-20分钟，取决于电脑配置，这个时候看起来像假死，但是千万不要杀进程，耐心等待即可。</p>
 <p>在感兴趣的位置挂断点，把<code>Chrome\Chrome</code>这个工程设置为启动工程，起调试器。这个时候会提示无法Build（因为Chromium的build系统是ninja，现在VS没有很好的支持），是否用上次成功的Build，点是即可快乐调试~</p>
 <p>推荐安装以下几个插件：</p>
 <p>github copilot, File Path On Footer, VsColorOutput64。</p>
 <p>Happy debugging~</p>
-<h3 id="visual-studio-code">Visual Studio Code</h3>
+<h3 id="visual-studio-code">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#visual-studio-code">Visual Studio Code</a>
+</h3>
 <p>Chromium推荐使用clangd作为LSP。</p>
 <ol>
 <li>从llvm的官方网站安装clangd，vscode的插件安装vscode-clangd，C/C++；</li>
@@ -452,7 +157,9 @@ Visual Studio Code Chromium推荐使用clangd作为LSP。
 <li>cd到<code>Chromium/src</code>，右键“使用code打开”，会提示intellisense和clangd冲突，是否禁用intellisense，禁用即可；</li>
 <li>enjoy~</li>
 </ol>
-<h2 id="查文档的一些奇技淫巧">查文档的一些奇技淫巧</h2>
+<h2 id="查文档的一些奇技淫巧">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#%e6%9f%a5%e6%96%87%e6%a1%a3%e7%9a%84%e4%b8%80%e4%ba%9b%e5%a5%87%e6%8a%80%e6%b7%ab%e5%b7%a7">查文档的一些奇技淫巧</a>
+</h2>
 <p>Chromium的文档主要有以下几处：</p>
 <ol>
 <li>设计文档：https://www.chromium.org/developers/design-documents/；</li>
@@ -460,7 +167,9 @@ Visual Studio Code Chromium推荐使用clangd作为LSP。
 <li>内部文档：直接在仓库中搜索关键字，文件类型选<code>*.md</code>，本机没有代码没关系，看这里https://source.chromium.org/chromium；</li>
 <li>直接搜代码，代码中有非常多的宝藏评论，用正则搜。最简单的正则：<code>keyword1.*keyword2</code>，搜索文件类型<code>*.cc,*.h</code>，可以匹配所有一行中包括keyword1和keyword2（按顺序）的源码。</li>
 </ol>
-<h2 id="debug">Debug</h2>
+<h2 id="debug">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#debug">Debug</a>
+</h2>
 <ol>
 <li>
 <p>由于Chromium的进程非常多，调试比较麻烦。如果是VS，可以使用Microsoft Child Process Debugging Power Tool 2022这个VS extension，可以自动将断点挂到其他进程。</p>
@@ -469,371 +178,67 @@ Visual Studio Code Chromium推荐使用clangd作为LSP。
 <p>debug log（<code>DLOG</code>等）的输出目录在<code>out\Default</code>，详情 <a href="https://www.chromium.org/developers/how-tos/debugging-on-windows/#chrome-debug-log">https://www.chromium.org/developers/how-tos/debugging-on-windows/#chrome-debug-log</a></p>
 </li>
 </ol>
-<h2 id="refs">Refs</h2>
+<h2 id="refs">
+  <a class="Heading-link u-clickable" href="/posts/20242020_chromium%E9%85%8D%E7%BD%AE/#refs">Refs</a>
+</h2>
 <p>需要用到的几个文档：</p>
 <ol>
 <li>vscode 配置clangd <a href="https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md">https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md</a></li>
 <li>windows下从源码构建 <a href="https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md">https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md</a></li>
 </ol>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">最后修改于 2024-01-01</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="/posts/20231210_%E7%99%B8%E5%8D%AF%E5%B9%B4%E8%AE%B0/">
-			下回<br>癸卯年记
-                </a>
-                
-                
-                
-                <a class="older-posts" href="/posts/20230912_%E4%B8%AD%E5%A4%96%E8%A7%81%E9%97%BB%E9%9A%8F%E6%83%B3%E5%BD%95/">
-			上回<br>中外见闻随想录
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://giscus.app/client.js"
-        data-repo=""
-        data-repo-id=""
-        data-category=""
-        data-category-id=""
-        data-mapping=""
-        data-strict=""
-        data-reactions-enabled=""
-        data-emit-metadata=""
-        data-input-position=""
-        data-theme=""
-        data-lang=""
-        crossorigin=""
-        async>
-</script>
-
-            </div>
-        </div>
-    </div>
-
-
-                    </div>
-            </div><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://www.wxgopher.cc/">
-    
-        <div class="nav-title">
-            wxgopher
-        </div>
-        
-        <div class="nav-subtitle">
-            日拱一卒，功不唐捐。
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-            
-            
-            
-                
-            
-            
-            
-            <a class="a-block nav-link-item active" href="/posts">
-                Archive
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories">
-                Categories
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/tags">
-                Tags
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/index.xml">
-                RSS Feed
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/about/">
-                About
-            </a>
-            
-        
-    </div>
-
     
 
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
+  
 
-&copy;
-	
-	2024 wxgopher
-	
+  
 
-    </div>
+
+
+
+
+  <footer>
     
-</div><div id="extraContainer" class="extra-container">
-    <div class="toc-wrapper">
-        
-
-        
-        <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- 目录 -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#chromium%e5%bc%80%e5%8f%910x01" class="nav-chromium开发0x01">
-									Chromium开发0x01
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e7%bc%96%e8%af%91%e7%9b%b8%e5%85%b3" class="nav-编译相关">
-									编译相关
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%aedebug" class="nav-环境配置debug">
-									环境配置/Debug
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#visual-studio" class="nav-visual-studio">
-									Visual Studio
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#visual-studio-code" class="nav-visual-studio-code">
-									Visual Studio Code
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-							
-								</ul>
-							
-						
-						
-						
-							<li>
-								<a href="#%e6%9f%a5%e6%96%87%e6%a1%a3%e7%9a%84%e4%b8%80%e4%ba%9b%e5%a5%87%e6%8a%80%e6%b7%ab%e5%b7%a7" class="nav-查文档的一些奇技淫巧">
-									查文档的一些奇技淫巧
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#debug" class="nav-debug">
-									Debug
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#refs" class="nav-refs">
-									Refs
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-        
-    </div>
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
-            :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2024 wxgopher
-	
-</div>
-            </div>
+      
+        <ul class="Tags">
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/categories/tech/" rel="tag">tech</a>
+            </li>
+          
+        </ul>
+      
     
-    <script src="/js/journal.js"></script></body>
+      
+        <ul class="Tags">
+          
+        </ul>
+      
+    
+  </footer>
+
+    
+  
+    
+    
+    <script src="https://utteranc.es/client.js" data-repo="your repo" data-issue-term="pathname" data-theme="github-light" crossorigin="anonymous" async></script>
+  
+
+  </article>
+
+
+      </div>
+    </div>
+  </main>
+  
+  <footer class="Footer">
+    <div class="u-wrapper">
+      <div class="u-padding u-noboosting">
+        Except where otherwise noted, content on this site is licensed under a &#32; <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>

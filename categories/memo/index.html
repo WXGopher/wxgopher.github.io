@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html><head>
-<title>memo</title>
+<html lang="en-us">
+
+<head>
+  
+  <meta charset="utf-8">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+  
+    
+  
 
-<meta property="og:title" content="memo" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.wxgopher.cc/categories/memo/" /><meta property="og:site_name" content="wxgopher" />
+
+<meta name="color-scheme" content="light dark">
+
 
 
 
 
 
 
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="memo"/>
-<meta name="twitter:description" content=""/>
+<meta name="generator" content="Hugo 0.122.0">
+  <title>memo | wxgopher</title>
+  <link rel="canonical" href="https://www.wxgopher.cc/categories/memo/">
 
 
 
+
+  <link rel="alternate" href="/categories/memo/feed.xml" type="application/rss+xml">
+
+  
 
 
 
@@ -40,416 +42,130 @@
 
 
   
+    
+  
+  
+      <link rel="stylesheet" href="/css/base.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.css" integrity="sha256-VD2cTuzvIQ19bDxCz8t6SHAYcXkky6BJaWWx/9Ll8uI=" crossorigin="anonymous">
 
 
-
-
-
-
-    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
-
-
-<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Material+Icons">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>console.log("Hello from 'layouts/partials/extended_head.html'")</script>
 
 </head>
+
 <body>
-    	<div id="app"><div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/posts">
-                    Archive
-                </a>
-                
-            
-                
-                
-                
-                    
-                
-                
-                
-                <a class="a-block drawer-menu-item active" href="/categories">
-                    Categories
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/tags">
-                    Tags
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/index.xml">
-                    RSS Feed
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/about/">
-                    About
-                </a>
-                
-            
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://www.wxgopher.cc/">
-            wxgopher
-        </a>
+  <nav class="u-background">
+  <div class="u-wrapper">
+    <ul class="Banner">
+      <li class="Banner-item Banner-item--title">
+        <h1 class="Banner-heading">
+          <a class="Banner-link u-clickable" href="/">wxgopher</a>
+        </h1>
+      </li>
+      
         
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
         
-    </div>
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/posts">Posts</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/tags">Tags</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/index.xml">RSS Feed</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://www.wxgopher.cc/">
-        <div class="single-column-header-title">wxgopher</div>
-        
-        <div class="single-column-header-subtitle">日拱一卒，功不唐捐。</div>
+
+  <main>
+    <div class="u-wrapper">
+      <div class="u-padding">
         
 
-    </a>
-</div>
+  <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="/categories/memo/" rel="bookmark">memo</a>
+  </h2>
+  
+</header>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
+  
 
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post-item-wrapper post-item-wrapper-no-hover">
-            <div class="post-item post-item-no-gaps">
-                <div class="post-item-info-wrapper">
-                    <div class="post-item-title  post-item-title-small">
-                        <a href="/categories/">Categories</a> / memo
-                    </div>
-                </div>
-            </div>
-        </div><a href="/posts/20240301_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            日常记录/2402
-                        </div>
-                        <div class="post-item-meta">
-    2024-03-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/posts/20231210_%E7%99%B8%E5%8D%AF%E5%B9%B4%E8%AE%B0/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            癸卯年记
-                        </div>
-                        <div class="post-item-meta">
-    2024-01-03
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/posts/20230912_%E4%B8%AD%E5%A4%96%E8%A7%81%E9%97%BB%E9%9A%8F%E6%83%B3%E5%BD%95/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            中外见闻随想录
-                        </div>
-                        <div class="post-item-meta">
-    2023-09-10
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/posts/20230806_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            日常记录/2307
-                        </div>
-                        <div class="post-item-meta">
-    2023-08-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/posts/20210101_%E9%AB%98%E8%80%83%E5%90%8E%E5%8D%81%E5%B9%B4/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            高考后十年
-                        </div>
-                        <div class="post-item-meta">
-    2021-01-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/posts/201905_%E7%83%AD%E8%A1%80%E5%AD%A4%E6%98%9F/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            热血孤星——德州见闻记
-                        </div>
-                        <div class="post-item-meta">
-    2019-05-01
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a><a href="/posts/20190101_canada_eh/" class="a-block">
-            <div class="post-item-wrapper">
-                <div class="post-item post-item-no-gaps">
-                    <div class="post-item-info-wrapper">
-                        <div class="post-item-title">
-                            Canada, Eh
-                        </div>
-                        <div class="post-item-meta">
-    2019-02-15
-    &emsp;
-    
-    
-    
-    &emsp;
-    
-</div>
-
-                    </div>
-                </div>
-            </div>
-        </a></div>
+  
+    <h3>2024</h3>
+    <ul>
+      
+        <li>
+          2024-03-01 – <a href="/posts/20240301_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/">日常记录/2402</a>
+        </li>
+      
+        <li>
+          2024-01-03 – <a href="/posts/20231210_%E7%99%B8%E5%8D%AF%E5%B9%B4%E8%AE%B0/">癸卯年记</a>
+        </li>
+      
+    </ul>
+  
+    <h3>2023</h3>
+    <ul>
+      
+        <li>
+          2023-09-10 – <a href="/posts/20230912_%E4%B8%AD%E5%A4%96%E8%A7%81%E9%97%BB%E9%9A%8F%E6%83%B3%E5%BD%95/">中外见闻随想录</a>
+        </li>
+      
+        <li>
+          2023-08-01 – <a href="/posts/20230806_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/">日常记录/2307</a>
+        </li>
+      
+    </ul>
+  
+    <h3>2021</h3>
+    <ul>
+      
+        <li>
+          2021-01-01 – <a href="/posts/20210101_%E9%AB%98%E8%80%83%E5%90%8E%E5%8D%81%E5%B9%B4/">高考后十年</a>
+        </li>
+      
+    </ul>
+  
+    <h3>2019</h3>
+    <ul>
+      
+        <li>
+          2019-05-01 – <a href="/posts/201905_%E7%83%AD%E8%A1%80%E5%AD%A4%E6%98%9F/">热血孤星——德州见闻记</a>
+        </li>
+      
+        <li>
+          2019-02-15 – <a href="/posts/20190101_canada_eh/">Canada, Eh</a>
+        </li>
+      
+    </ul>
+  
 
 
-                    </div>
-            </div><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://www.wxgopher.cc/">
-    
-        <div class="nav-title">
-            wxgopher
-        </div>
-        
-        <div class="nav-subtitle">
-            日拱一卒，功不唐捐。
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/posts">
-                Archive
-            </a>
-            
-        
-            
-            
-            
-                
-            
-            
-            
-            <a class="a-block nav-link-item active" href="/categories">
-                Categories
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/tags">
-                Tags
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/index.xml">
-                RSS Feed
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/about/">
-                About
-            </a>
-            
-        
+      </div>
     </div>
-
-    
-
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2024 wxgopher
-	
-
+  </main>
+  
+  <footer class="Footer">
+    <div class="u-wrapper">
+      <div class="u-padding u-noboosting">
+        Except where otherwise noted, content on this site is licensed under a &#32; <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+      </div>
     </div>
-    
-</div><div id="extraContainer" class="extra-container">
-    <div class="toc-wrapper">
-        
+  </footer>
 
-        
-    </div>
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
-            :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
+</body>
 
-&copy;
-	
-	2024 wxgopher
-	
-</div>
-            </div>
-    
-    <script src="/js/journal.js"></script></body>
 </html>

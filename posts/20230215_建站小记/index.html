@@ -1,23 +1,17 @@
 <!DOCTYPE html>
-<html><head>
-<title>建站小记</title>
+<html lang="en-us">
+
+<head>
+  
+  <meta charset="utf-8">
 
 
 
-
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-
-<meta property="og:title" content="建站小记" />
-<meta property="og:description" content="准备重开个人博客，希望跟世界建立更多的连接。网络上的帖子看了很多也折腾了许久，但是弱水三千只取一瓢，最后自己摸索出来的建站方案是各个帖子东拼西凑下来的。记录下来供有缘人参考。
+  
+    <meta name="description" content="准备重开个人博客，希望跟世界建立更多的连接。网络上的帖子看了很多也折腾了许久，但是弱水三千只取一瓢，最后自己摸索出来的建站方案是各个帖子东拼西凑下来的。记录下来供有缘人参考。
 建站和写作 创建一个私人的Github 仓库（例如叫Hugo_Site），我采用的是Hugo。直接按照官方的指南安装即可。我使用的主题是Diary。将主题下载下来，放到themes目录中。
 对于图文博客，初期没有考虑图床。为了更方便管理，我参考的是Hugo如何在markdown里引用本地图片。我使用的是Typora写作，在Typora中将存储图片到相同目录这个选项打开即可。在写作的时候，在/Content/Posts目录下新建一个文件夹，在其内新建一个index.md，在这个md文件中写作。图片会存储在这个文件夹内，在生成站点的时候也会自动被Hugo拷贝到正确的目录，不用我们管。
 写完文章以后在我们的仓库根目录下hugo server -d就可以预览网站，直接hugo生成网站。
@@ -26,28 +20,11 @@
 .gitignore参考https://github.com/github/gitignore/blob/main/community/Golang/Hugo.gitignore 这个目录就是我们的网站目录。首先需要在Github上新建一个公开仓库，命名为username.github.io。然后在这个public目录下新建一个本地git仓库，git remote add origin设置为username.github.io这个远程仓库。 在生成网站以后，将username.github.io这个仓库Push到Github，稍等片刻访问username.github.io就能看到我们的个人博客上线啦。
 如果需要自定义域名，从域名提供商那里购买域名，然后设置解析到username.github.io即可。我的域名(www.wxgopher.cc)是在Cloudflare购买的。在Cloudflare的设置界面中设置CNAME代理www到wxgopher.github.io。同时在wxgopher.github.io的repo中找到Settings-&gt;Pages-&gt;Custom Domain，设置www.wxgopher.cc。
 20230219更新：将网站同时部署到了cloudflare pages，提高国内的访问速度。域名设置重定向到cloudflare pages。如何设置只需要按照cloudflare手册操作即可。
-部署和SEO 我们每次写完博客以后必须本地hugo生成一下，然后手动Push /Public中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push Hugo_Site的时候自动触发网站构建并推送到Github Pages。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.wxgopher.cc/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-02-15T12:13:38+05:30" />
-<meta property="article:modified_time" content="2023-02-15T12:13:38+05:30" /><meta property="og:site_name" content="wxgopher" />
+部署和SEO 我们每次写完博客以后必须本地hugo生成一下，然后手动Push /Public中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push Hugo_Site的时候自动触发网站构建并推送到Github Pages。">
+  
 
 
-
-
-
-
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="建站小记"/>
-<meta name="twitter:description" content="准备重开个人博客，希望跟世界建立更多的连接。网络上的帖子看了很多也折腾了许久，但是弱水三千只取一瓢，最后自己摸索出来的建站方案是各个帖子东拼西凑下来的。记录下来供有缘人参考。
-建站和写作 创建一个私人的Github 仓库（例如叫Hugo_Site），我采用的是Hugo。直接按照官方的指南安装即可。我使用的主题是Diary。将主题下载下来，放到themes目录中。
-对于图文博客，初期没有考虑图床。为了更方便管理，我参考的是Hugo如何在markdown里引用本地图片。我使用的是Typora写作，在Typora中将存储图片到相同目录这个选项打开即可。在写作的时候，在/Content/Posts目录下新建一个文件夹，在其内新建一个index.md，在这个md文件中写作。图片会存储在这个文件夹内，在生成站点的时候也会自动被Hugo拷贝到正确的目录，不用我们管。
-写完文章以后在我们的仓库根目录下hugo server -d就可以预览网站，直接hugo生成网站。
-最后我们的目录树如下：
-├── .git //这是我们的私人仓库 ├── .github //这是我们使用github action的地方，用于部署 │ └── workflows ├── .gitignore //[1] ├── .gitmodules ├── assets ├── config.toml ├── content │ └── posts //文章贴这里 ├── data ├── public //[2] │ ├── .git ├── resources │ └── _gen ├── static //[3] └── themes └── diary 注释：
-.gitignore参考https://github.com/github/gitignore/blob/main/community/Golang/Hugo.gitignore 这个目录就是我们的网站目录。首先需要在Github上新建一个公开仓库，命名为username.github.io。然后在这个public目录下新建一个本地git仓库，git remote add origin设置为username.github.io这个远程仓库。 在生成网站以后，将username.github.io这个仓库Push到Github，稍等片刻访问username.github.io就能看到我们的个人博客上线啦。
-如果需要自定义域名，从域名提供商那里购买域名，然后设置解析到username.github.io即可。我的域名(www.wxgopher.cc)是在Cloudflare购买的。在Cloudflare的设置界面中设置CNAME代理www到wxgopher.github.io。同时在wxgopher.github.io的repo中找到Settings-&gt;Pages-&gt;Custom Domain，设置www.wxgopher.cc。
-20230219更新：将网站同时部署到了cloudflare pages，提高国内的访问速度。域名设置重定向到cloudflare pages。如何设置只需要按照cloudflare手册操作即可。
-部署和SEO 我们每次写完博客以后必须本地hugo生成一下，然后手动Push /Public中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push Hugo_Site的时候自动触发网站构建并推送到Github Pages。"/>
+<meta name="color-scheme" content="light dark">
 
 
 
@@ -55,6 +32,9 @@
 
 
 
+<meta name="generator" content="Hugo 0.122.0">
+  <title>建站小记 | wxgopher</title>
+  <link rel="canonical" href="https://www.wxgopher.cc/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/">
 
 
 
@@ -66,256 +46,79 @@
 
 
 
-      <script src="/js/toc.js"></script>
+
+
+  
     
-    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
-
-
-<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Material+Icons">
+  
+  
+      <link rel="stylesheet" href="/css/base.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.css" integrity="sha256-VD2cTuzvIQ19bDxCz8t6SHAYcXkky6BJaWWx/9Ll8uI=" crossorigin="anonymous">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script>console.log("Hello from 'layouts/partials/extended_head.html'")</script>
 
 </head>
+
 <body>
-    	<div id="app"><div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-                
-                
-                
-                    
-                
-                
-                
-                <a class="a-block drawer-menu-item active" href="/posts">
-                    Archive
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/categories">
-                    Categories
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/tags">
-                    Tags
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/index.xml">
-                    RSS Feed
-                </a>
-                
-            
-                
-                
-                
-                
-                
-                <a class="a-block drawer-menu-item false" href="/about/">
-                    About
-                </a>
-                
-            
-            
-            <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- 目录 -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e5%bb%ba%e7%ab%99%e5%92%8c%e5%86%99%e4%bd%9c" class="nav-建站和写作">
-									建站和写作
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%83%a8%e7%bd%b2%e5%92%8cseo" class="nav-部署和seo">
-									部署和SEO
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%85%b6%e4%bb%96" class="nav-其他">
-									其他
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-            
-        </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://www.wxgopher.cc/">
-            wxgopher
-        </a>
+  <nav class="u-background">
+  <div class="u-wrapper">
+    <ul class="Banner">
+      <li class="Banner-item Banner-item--title">
+        <h1 class="Banner-heading">
+          <a class="Banner-link u-clickable" href="/">wxgopher</a>
+        </h1>
+      </li>
+      
         
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
         
-    </div>
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/posts">Posts</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/tags">Tags</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/index.xml">RSS Feed</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://www.wxgopher.cc/">
-        <div class="single-column-header-title">wxgopher</div>
-        
-        <div class="single-column-header-subtitle">日拱一卒，功不唐捐。</div>
+
+  <main>
+    <div class="u-wrapper">
+      <div class="u-padding">
         
 
-    </a>
-</div>
-
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
-
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
-
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    建站小记
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2023-02-15 12:13
-                        </time>
-                        
-
-                        
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/misc">misc</a>
-                                &nbsp;
-                        
-
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <p>准备重开个人博客，希望跟世界建立更多的连接。网络上的帖子看了很多也折腾了许久，但是弱水三千只取一瓢，最后自己摸索出来的建站方案是各个帖子东拼西凑下来的。记录下来供有缘人参考。</p>
-<h2 id="建站和写作">建站和写作</h2>
+  <article>
+    <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/" rel="bookmark">建站小记</a>
+  </h2>
+  
+    <time datetime="2023-02-15T12:13:38&#43;05:30">2023年2月15日</time>
+  
+</header>
+    <p>准备重开个人博客，希望跟世界建立更多的连接。网络上的帖子看了很多也折腾了许久，但是弱水三千只取一瓢，最后自己摸索出来的建站方案是各个帖子东拼西凑下来的。记录下来供有缘人参考。</p>
+<h2 id="建站和写作">
+  <a class="Heading-link u-clickable" href="/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/#%e5%bb%ba%e7%ab%99%e5%92%8c%e5%86%99%e4%bd%9c">建站和写作</a>
+</h2>
 <p>创建一个私人的Github 仓库（例如叫<code>Hugo_Site</code>），我采用的是<a href="https://github.com/gohugoio/hugo">Hugo</a>。直接按照官方的指南安装即可。我使用的主题是<a href="https://themes.gohugo.io/themes/hugo-theme-diary/">Diary</a>。将主题下载下来，放到<code>themes</code>目录中。</p>
 <p>对于图文博客，初期没有考虑图床。为了更方便管理，我参考的是<a href="https://blog.csdn.net/perfumekristy/article/details/122086009">Hugo如何在markdown里引用本地图片</a>。我使用的是<a href="https://typora.io/">Typora</a>写作，在Typora中将存储图片到相同目录这个选项打开即可。在写作的时候，在<code>/Content/Posts</code>目录下新建一个文件夹，在其内新建一个<code>index.md</code>，在这个md文件中写作。图片会存储在这个文件夹内，在生成站点的时候也会自动被Hugo拷贝到正确的目录，不用我们管。</p>
 <p>写完文章以后在我们的仓库根目录下<code>hugo server -d</code>就可以预览网站，直接<code>hugo</code>生成网站。</p>
 <p>最后我们的目录树如下：</p>
+
 <pre tabindex="0"><code>├── .git //这是我们的私人仓库
 ├── .github //这是我们使用github action的地方，用于部署
 │   └── workflows
@@ -332,8 +135,8 @@
 │   └── _gen
 ├── static //[3]
 └── themes
-    └── diary
-</code></pre><p>注释：</p>
+    └── diary</code></pre>
+<p>注释：</p>
 <ol>
 <li><code>.gitignore</code>参考https://github.com/github/gitignore/blob/main/community/Golang/Hugo.gitignore</li>
 <li>这个目录就是我们的网站目录。首先需要在Github上新建一个公开仓库，命名为<code>username.github.io</code>。然后在这个public目录下新建一个本地git仓库，<code>git remote add origin</code>设置为<code>username.github.io</code>这个远程仓库。</li>
@@ -341,10 +144,13 @@
 <p>在生成网站以后，将<code>username.github.io</code>这个仓库Push到Github，稍等片刻访问<code>username.github.io</code>就能看到我们的个人博客上线啦。</p>
 <p>如果需要自定义域名，从域名提供商那里购买域名，然后设置解析到<code>username.github.io</code>即可。我的域名(<a href="https://www.wxgopher.cc">www.wxgopher.cc</a>)是在Cloudflare购买的。在Cloudflare的设置界面中设置CNAME代理www到wxgopher.github.io。同时在wxgopher.github.io的repo中找到Settings-&gt;Pages-&gt;Custom Domain，设置www.wxgopher.cc。</p>
 <p>20230219更新：将网站同时部署到了cloudflare pages，提高国内的访问速度。域名设置重定向到cloudflare pages。如何设置只需要按照cloudflare手册操作即可。</p>
-<h2 id="部署和seo">部署和SEO</h2>
+<h2 id="部署和seo">
+  <a class="Heading-link u-clickable" href="/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/#%e9%83%a8%e7%bd%b2%e5%92%8cseo">部署和SEO</a>
+</h2>
 <p>我们每次写完博客以后必须本地<code>hugo</code>生成一下，然后手动Push <code>/Public</code>中的内容到Github，这很繁琐。我们可以设置Github Action，在每次Push <code>Hugo_Site</code>的时候自动触发网站构建并推送到Github Pages。</p>
 <p>首先在Github账户中找到Setting - Developer setting - Personal access tokens。新建一个token，开启Repo和workflow权限，然后记录下这个Token。注意，这个Token只会展示一次。</p>
 <p>在<code>Hugo_Site/.github/workflows</code>中新建<code>deploy.yml</code>，内容如下：</p>
+
 <pre tabindex="0"><code>name: deploy
 
 on:
@@ -380,13 +186,15 @@ jobs:
                   EXTERNAL_REPOSITORY: wxgopher/wxgopher.github.io
                   PUBLISH_BRANCH: master
                   PUBLISH_DIR: ./public
-                  CNAME: www.wxgopher.cc
-</code></pre><p>这里CNAME，EXTERNAL_REPOSITORY换成自己的。然后在仓库的Settings-&gt;Secrets中新建一个名称叫<code>PERSONAL_TOKEN</code>的Secret，值为刚才的Token值。直接Push到<code>Hugo_Site</code>这个仓库便会触发自动构建网站，构建网站的产物自动推送到<code>wxgopher.github.io</code>这个仓库中。</p>
+                  CNAME: www.wxgopher.cc</code></pre>
+<p>这里CNAME，EXTERNAL_REPOSITORY换成自己的。然后在仓库的Settings-&gt;Secrets中新建一个名称叫<code>PERSONAL_TOKEN</code>的Secret，值为刚才的Token值。直接Push到<code>Hugo_Site</code>这个仓库便会触发自动构建网站，构建网站的产物自动推送到<code>wxgopher.github.io</code>这个仓库中。</p>
 <p>设置SEO，让搜索引擎能抓到自己的网站：</p>
 <p>百度：在https://ziyuan.baidu.com/中验证自己的网站，然后手动提交网站Sitemap；</p>
 <p>Bing：在Bing Webmaster中提交自己的网站；</p>
 <p>Google：在Google Search Central中提交自己的网站。</p>
-<h2 id="其他">其他</h2>
+<h2 id="其他">
+  <a class="Heading-link u-clickable" href="/posts/20230215_%E5%BB%BA%E7%AB%99%E5%B0%8F%E8%AE%B0/#%e5%85%b6%e4%bb%96">其他</a>
+</h2>
 <p>更多SEO/评论等功能可以参考后文的参考文献。</p>
 <p>Happy Blogging~</p>
 <p>参考文献：</p>
@@ -397,264 +205,62 @@ jobs:
 <p><a href="https://zgcr.gitlab.io/2019/02/05/shi-yong-gitlab-pages-zi-dong-bu-shu-hexo-bo-ke/">Github pages部署hexo博客的缺点</a></p>
 <p><a href="https://myth.cx/p/hugo-auto-submit-baidu/">Hugo auto submit to baidu</a></p>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">最后修改于 2023-02-15</p>
-                    
-                </div>
-            </div>
-            
-            
-            <nav class="post-pagination">
-
-                
-                <a class="newer-posts" href="/posts/20230806_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/">
-			下回<br>日常记录/2307
-                </a>
-                
-                
-                
-                <a class="older-posts" href="/about/">
-			上回<br>About
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="https://giscus.app/client.js"
-        data-repo=""
-        data-repo-id=""
-        data-category=""
-        data-category-id=""
-        data-mapping=""
-        data-strict=""
-        data-reactions-enabled=""
-        data-emit-metadata=""
-        data-input-position=""
-        data-theme=""
-        data-lang=""
-        crossorigin=""
-        async>
-</script>
-
-            </div>
-        </div>
-    </div>
-
-
-                    </div>
-            </div><div id="sideContainer" class="side-container">
-    
-    <a class="a-block nav-head false" href="https://www.wxgopher.cc/">
-    
-        <div class="nav-title">
-            wxgopher
-        </div>
-        
-        <div class="nav-subtitle">
-            日拱一卒，功不唐捐。
-        </div>
-        
-    </a>
-
-    <div class="nav-link-list">
-        
-        
-            
-            
-            
-                
-            
-            
-            
-            <a class="a-block nav-link-item active" href="/posts">
-                Archive
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/categories">
-                Categories
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/tags">
-                Tags
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/index.xml">
-                RSS Feed
-            </a>
-            
-        
-            
-            
-            
-            
-            
-            <a class="a-block nav-link-item false" href="/about/">
-                About
-            </a>
-            
-        
-    </div>
-
     
 
-    <div class="nav-footer">
-        
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
+  
 
-&copy;
-	
-	2024 wxgopher
-	
+  
 
-    </div>
+
+
+
+
+  <footer>
     
-</div><div id="extraContainer" class="extra-container">
-    <div class="toc-wrapper">
-        
-
-        
-        <div class="toc">
-
-
-	<div class="toc-content">
-	
-		
-		
-		
-		<center>- 目录 -</center>
-		
-		
-		<ul>
-			
-				
-				
-					
-						
-						
-						
-						
-							
-								
-									<ul>
-								
-							
-						
-						
-							<li>
-								<a href="#%e5%bb%ba%e7%ab%99%e5%92%8c%e5%86%99%e4%bd%9c" class="nav-建站和写作">
-									建站和写作
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e9%83%a8%e7%bd%b2%e5%92%8cseo" class="nav-部署和seo">
-									部署和SEO
-								</a>
-							</li>
-						
-						
-					
-				
-			
-				
-				
-					
-						
-						
-						
-						
-						
-							<li>
-								<a href="#%e5%85%b6%e4%bb%96" class="nav-其他">
-									其他
-								</a>
-							</li>
-						
-						
-					
-				
-			
-		</ul>
-	</div>
-
-</div>
-        
-    </div>
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
-            :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-<div id="single-column-footer">
-Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
-<br>
-移植自 <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
-<br>
-
-&copy;
-	
-	2024 wxgopher
-	
-</div>
-            </div>
+      
+        <ul class="Tags">
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/categories/misc/" rel="tag">misc</a>
+            </li>
+          
+        </ul>
+      
     
-    <script src="/js/journal.js"></script></body>
+      
+        <ul class="Tags">
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/tags/about/" rel="tag">about</a>
+            </li>
+          
+        </ul>
+      
+    
+  </footer>
+
+    
+  
+    
+    
+    <script src="https://utteranc.es/client.js" data-repo="your repo" data-issue-term="pathname" data-theme="github-light" crossorigin="anonymous" async></script>
+  
+
+  </article>
+
+
+      </div>
+    </div>
+  </main>
+  
+  <footer class="Footer">
+    <div class="u-wrapper">
+      <div class="u-padding u-noboosting">
+        Except where otherwise noted, content on this site is licensed under a &#32; <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>
