@@ -6,60 +6,70 @@
     <description>Recent content on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2024 12:13:38 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2024 12:13:38 +0530</lastBuildDate>
     
         <atom:link href="https://www.wxgopher.cc/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>Chromium开发0x01</title>
-        <link>https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/</link>
-        <pubDate>Fri, 02 Feb 2024 12:13:38 +0530</pubDate>
+        <title>日常记录/2402</title>
+        <link>https://www.wxgopher.cc/posts/20240301_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</link>
+        <pubDate>Fri, 01 Mar 2024 12:13:38 +0530</pubDate>
         
-        <guid>https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/</guid>
-        <description>wxgopher https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/ -&lt;p&gt;源码来自2024年1月的Chromium仓库。&lt;/p&gt;
-&lt;h2 id=&#34;编译相关&#34;&gt;编译相关&lt;/h2&gt;
-&lt;p&gt;下载拉取代码按照教程来做即可：https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md#get-the-code&lt;/p&gt;
-&lt;p&gt;自备梯子xD&lt;/p&gt;
-&lt;p&gt;注意，不需要验证&lt;code&gt;python&lt;/code&gt;环境变量，把&lt;code&gt;depot_tools&lt;/code&gt;设置在PATH的第一位就没问题了。&lt;/p&gt;
-&lt;p&gt;生成vs工程和Build target，这样会在&lt;code&gt;out\Defualt&lt;/code&gt;目录下生成&lt;code&gt;all.sln&lt;/code&gt;：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;gn gen --ide=vs --filters=//chrome out\Default
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;编译：&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;autoninja -C out\Default chrome
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;编译要求至少32G内存（否则会OOM），16C32T的CPU大概要编2-3小时，泡一杯咖啡开始摸鱼。&lt;/p&gt;
-&lt;h2 id=&#34;环境配置debug&#34;&gt;环境配置/Debug&lt;/h2&gt;
-&lt;p&gt;推荐使用宇宙第一IDE Visual Studio进行调试，使用Visual Studio Code看代码。&lt;/p&gt;
-&lt;h3 id=&#34;visual-studio&#34;&gt;Visual Studio&lt;/h3&gt;
-&lt;p&gt;确保已经生成了vs工程，否则返回看上节。&lt;/p&gt;
-&lt;p&gt;第一次打开&lt;code&gt;all.sln&lt;/code&gt;大概要生成5G以上的intellisense文件，需要10-20分钟，取决于电脑配置，这个时候看起来像假死，但是千万不要杀进程，耐心等待即可。&lt;/p&gt;
-&lt;p&gt;在感兴趣的位置挂断点，把&lt;code&gt;Chrome\Chrome&lt;/code&gt;这个工程设置为启动工程，起调试器。这个时候会提示无法Build（因为Chromium的build系统是ninja，现在VS没有很好的支持），是否用上次成功的Build，点是即可快乐调试~&lt;/p&gt;
-&lt;p&gt;推荐安装以下几个插件：&lt;/p&gt;
-&lt;p&gt;github copilot, File Path On Footer, VsColorOutput64。&lt;/p&gt;
-&lt;p&gt;Happy debugging~&lt;/p&gt;
-&lt;h3 id=&#34;visual-studio-code&#34;&gt;Visual Studio Code&lt;/h3&gt;
-&lt;p&gt;Chromium推荐使用clangd作为LSP。&lt;/p&gt;
+        <guid>https://www.wxgopher.cc/posts/20240301_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</guid>
+        <description>wxgopher https://www.wxgopher.cc/posts/20240301_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/ -&lt;h2 id=&#34;最近觉得有意思的&#34;&gt;最近觉得有意思的&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;从llvm的官方网站安装clangd，vscode的插件安装vscode-clangd，C/C++；&lt;/li&gt;
-&lt;li&gt;生成clangd的compilation db：打开python3的anaconda控制台（或者任意Python3环境）,cd到&lt;code&gt;Chromium/src&lt;/code&gt;，执行&lt;code&gt; python tools/clang/scripts/generate_compdb.py -p out/Default &amp;gt; compile_commands.json&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;cd到&lt;code&gt;Chromium/src&lt;/code&gt;，右键“使用code打开”，会提示intellisense和clangd冲突，是否禁用intellisense，禁用即可；&lt;/li&gt;
-&lt;li&gt;enjoy~&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;查文档的一些奇技淫巧&#34;&gt;查文档的一些奇技淫巧&lt;/h2&gt;
-&lt;p&gt;Chromium的文档主要有以下几处：&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;前日和一位猎头朋友聊了聊，这位猎头朋友专做游戏行业，不过我已经不在游戏行业了，不妨还是听到了一些有意思的东西：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;设计文档：https://www.chromium.org/developers/design-documents/；&lt;/li&gt;
-&lt;li&gt;官方推荐的技能树：https://www.chromium.org/developers/how-tos/getting-around-the-chrome-source-code/#a-personal-learning-plan；&lt;/li&gt;
-&lt;li&gt;内部文档：直接在仓库中搜索关键字，文件类型选&lt;code&gt;*.md&lt;/code&gt;，本机没有代码没关系，看这里https://source.chromium.org/chromium；&lt;/li&gt;
-&lt;li&gt;直接搜代码，代码中有非常多的宝藏评论，用正则搜。最简单的正则：&lt;code&gt;keyword1.*keyword2&lt;/code&gt;，搜索文件类型&lt;code&gt;*.cc,*.h&lt;/code&gt;，可以匹配所有一行中包括keyword1和keyword2（按顺序）的源码。&lt;/li&gt;
+&lt;li&gt;脉脉会卖用户信息，猎头付费可以购买脉脉的人才库，我大概看了一下，数据主要包括行为分析结果（是不是急招/疑似在找工作），个人信息（假名，但是由于注册可以提供企业邮箱所以企业信息是真的）等，猎头可以通过这个信息直接给你打电话。这也是为啥有时候很奇怪猎头怎么知道自己电话的原因；&lt;/li&gt;
+&lt;li&gt;猎头对自己公司、部门的组织架构信息比自己想象的要全面和准确，猎头和猎头、你的各位同事之间也会互通有无。“谁手里还没有几个猎头的微信呢”是吧。听说我离职以后有几位同事也跟猎头打听过我的去向hhh；&lt;/li&gt;
+&lt;li&gt;圈子很小，声誉很重要；&lt;/li&gt;
+&lt;li&gt;现在AI真的很火，国内公司都在砸钱抢人，特别有21年的时候游戏行业抢人的盛况。不过我持谨慎乐观态度，毕竟算力问题还没有完全解决。按照猎头朋友的说法这次跟元宇宙不一样，这次是一个金库已经拔地而起在你面前了，钱就在那里，你要不要。听起来挺让人热血澎湃的 :D&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;refs&#34;&gt;Refs&lt;/h2&gt;
-&lt;p&gt;需要用到的几个文档：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前日在深圳地铁上看到的，你搬砖的样子真的👍&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;image-20240225170006781.png&#34; alt=&#34;image-20240225170006781&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;我感觉在国内一个地方的经济发展可能跟气候有一定的正相关性。今天去了一个东北小店吃饭，七八点的样子，老板娘在门口喃喃道这个点了街上还这么多人嘞……&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;看到了个鬼故事&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;3ef09fc0e54f1505d73e902fe89764e.jpg&#34; alt=&#34;3ef09fc0e54f1505d73e902fe89764e&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;最近看了什么&#34;&gt;最近看了什么&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://openai.com/research/video-generation-models-as-world-simulators&#34;&gt;Video generation models as world simulators&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2月15日，OpenAI的文字转视频模型SORA横空出世，这个震撼的效果直接宣判了一众从事AI视频生成的初创公司的死刑。&lt;/p&gt;
+&lt;p&gt;我读了一下tech report，能“大概看懂”，但是因为自己不做这个领域很难说自己理解的对不对，就不误导大家了。这里推荐一篇知乎文章：&lt;a href=&#34;https://zhuanlan.zhihu.com/p/682430755&#34;&gt;Sora 的一些个人思考 - 张心欣的文章 - 知乎&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;顺带一提，要理解LLM，推荐Stephen Wolfram写的《这就是ChatGPT》。&lt;/p&gt;
+&lt;p&gt;毫无意外OpenAI 并没有立刻开放公众使用SORA。因为很容易理解一项新技术民用一定会被别有用心的人用在未曾想过的地方。这个让我想到以前看的一本关于传播学的书《calling bullshit》，里面有提到we are drawn into the ocean of bullshit.求真是一件成本很高的事情，而AI制造的东西让求真的难度又上了一个台阶，更不论一些宣传憎恶和恐怖的视频了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;聪明人的个人成长&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;很久以前偶然在知乎翻到了一个帖子推荐这本，刚好微信读书上架了。坦白来说看过《高效能人士的七个习惯》、《原则》、《认知觉醒》一类的个人成长类的书籍会觉得这本书多是自己已经知道的东西。作者是一个非常典型的美国人，大大咧咧敢想敢做。对一些人来说可能药效过猛了，不过想要的东西自己主动去争取基本上还是没有错的。&lt;/p&gt;
+&lt;p&gt;看过这些书总结提炼一下共性：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;vscode 配置clangd &lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md&#34;&gt;https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;windows下从源码构建 &lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md&#34;&gt;https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;自己是自己人生的唯一负责人，你对自己的人生负全部的责任；&lt;/li&gt;
+&lt;li&gt;实事求是，以原则为中心生活；&lt;/li&gt;
+&lt;li&gt;独立很重要，互赖更重要，要走的远还是要与别人多建立连接。&lt;/li&gt;
 &lt;/ol&gt;
-- https://www.wxgopher.cc/posts/20242020_chromium%E9%85%8D%E7%BD%AE/ - </description>
+&lt;blockquote&gt;
+&lt;p&gt;影响力&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;很有意思的一本书，教我们怎么“拥有清醒的意识”的书。如果身边有人沉迷于直播带货、励志培训而他又听劝，这本书不妨推荐给他。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;技术为径：带领公司走向卓越的工程师&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这本书讲了技术领导如何做管理，如何带团队的方方面面。作者是软件工程技术出身，从基层员工到高管都做过，所以写出来的书既不是太过于阳春白雪视野也不至于局限，各个阶段的读者可以各取所需，给的例子也非常接地气。&lt;/p&gt;
+- https://www.wxgopher.cc/posts/20240301_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/ - </description>
         </item>
     
     

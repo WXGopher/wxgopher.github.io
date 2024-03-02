@@ -6,7 +6,7 @@
     <description>Recent content on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2024 12:13:38 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2024 12:13:38 +0530</lastBuildDate>
     
         <atom:link href="https://www.wxgopher.cc/index.xml" rel="self" type="application/rss+xml" />
     
@@ -509,6 +509,8 @@ x\mathbin\Box y % produces x \Box y
 &lt;/ul&gt;
 - https://www.wxgopher.cc/posts/notes_theltxprimer/ - </description>
         </item>
+    
+    
     
     
   </channel>
