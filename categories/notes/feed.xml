@@ -10,6 +10,31 @@
     <lastBuildDate>周日, 14 1月 2024 12:13:38 +0530</lastBuildDate>
     <atom:link rel="self" href="https://www.wxgopher.cc/categories/notes/feed.xml" type="application/rss+xml" />
     <item>
+      <title>Browser components</title>
+      <link>https://www.wxgopher.cc/posts/20240302_browsercomponents/</link>
+      <pubDate>周五, 01 3月 2024 12:13:38 +0530</pubDate>
+      <guid>https://www.wxgopher.cc/posts/20240302_browsercomponents/</guid>
+      <description>&lt;h2 id=&#34;intro&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://www.wxgopher.cc/posts/20240302_browsercomponents/#intro&#34;&gt;Intro&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;迁移指南: &lt;a href=&#34;https://www.chromium.org/developers/design-documents/cookbook/&#34;&gt;https://www.chromium.org/developers/design-documents/cookbook/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Layered design of a component:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20240217102541661.png&#34; alt=&#34;image-20240217102541661&#34;&gt;&lt;/p&gt;
+&lt;p&gt;What is a browser component?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20240217103631384.png&#34; alt=&#34;image-20240217103631384&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Directory structure of a browser component:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;image-20240217103551252.png&#34; alt=&#34;image-20240217103551252&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;example-safe-browsing&#34;&gt;
+  &lt;a class=&#34;Heading-link u-clickable&#34; href=&#34;https://www.wxgopher.cc/posts/20240302_browsercomponents/#example-safe-browsing&#34;&gt;Example: safe browsing&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;以security_interstitials为例来看一下component的相关实现。要测试safe browsing可以用以下网站 &lt;a href=&#34;https://testsafebrowsing.appspot.com/&#34;&gt;https://testsafebrowsing.appspot.com/&lt;/a&gt; （注意在chrome里要打开安全浏览）。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;README&lt;/code&gt;中提到&lt;code&gt;SecurityInterstitialControllerClient &lt;/code&gt;处理安全浏览相关的提示逻辑，搜它的子类，我们以&lt;code&gt;SSLErrorControllerClient&lt;/code&gt;为例。如果尝试访问&lt;code&gt;chrome://interstitial&lt;/code&gt;中关于SSL的链接会触发以下调用：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;%E6%9C%AA%E5%91%BD%E5%90%8D%E7%BB%98%E5%9B%BE.drawio.png&#34; alt=&#34;未命名绘图.drawio&#34;&gt;&lt;/p&gt;
+&lt;p&gt;相关的统计数据在单例&lt;code&gt;SafeBrowsingMetricsCollectorFactory&lt;/code&gt;中。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.chromium.org/developers/design-documents/safebrowsing/&#34;&gt;https://www.chromium.org/developers/design-documents/safebrowsing/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>日常记录/2402</title>
       <link>https://www.wxgopher.cc/posts/20240301_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</link>
       <pubDate>周五, 01 3月 2024 12:13:38 +0530</pubDate>

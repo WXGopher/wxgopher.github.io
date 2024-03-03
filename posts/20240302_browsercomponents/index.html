@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  
+  <meta charset="utf-8">
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  
+    <meta name="description" content="Intro 迁移指南: https://www.chromium.org/developers/design-documents/cookbook/
+Layered design of a component:
+What is a browser component?
+Directory structure of a browser component:
+Example: safe browsing 以security_interstitials为例来看一下component的相关实现。要测试safe browsing可以用以下网站 https://testsafebrowsing.appspot.com/ （注意在chrome里要打开安全浏览）。
+README中提到SecurityInterstitialControllerClient 处理安全浏览相关的提示逻辑，搜它的子类，我们以SSLErrorControllerClient为例。如果尝试访问chrome://interstitial中关于SSL的链接会触发以下调用：
+相关的统计数据在单例SafeBrowsingMetricsCollectorFactory中。
+https://www.chromium.org/developers/design-documents/safebrowsing/">
+  
+
+
+<meta name="color-scheme" content="light dark">
+
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.122.0">
+  <title>Browser components | wxgopher</title>
+  <link rel="canonical" href="https://www.wxgopher.cc/posts/20240302_browsercomponents/">
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+    
+  
+  
+      <link rel="stylesheet" href="/css/base.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.min.543d9c4eecef210d7d6c3c42cfcb7a487018717924cba0496965b1ffd2e5f2e2.css" integrity="sha256-VD2cTuzvIQ19bDxCz8t6SHAYcXkky6BJaWWx/9Ll8uI=" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+  <nav class="u-background">
+  <div class="u-wrapper">
+    <ul class="Banner">
+      <li class="Banner-item Banner-item--title">
+        <h1 class="Banner-heading">
+          <a class="Banner-link u-clickable" href="/">wxgopher</a>
+        </h1>
+      </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/posts">Posts</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/tags">Tags</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/index.xml">RSS Feed</a>
+        </li>
+      
+        
+        
+        <li class="Banner-item">
+          <a class="Banner-link u-clickable" href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</nav>
+
+  <main>
+    <div class="u-wrapper">
+      <div class="u-padding">
+        
+
+  <article>
+    <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="/posts/20240302_browsercomponents/" rel="bookmark">Browser components</a>
+  </h2>
+  
+    <time datetime="2024-03-01T12:13:38&#43;05:30">2024年3月1日</time>
+  
+</header>
+    <h2 id="intro">
+  <a class="Heading-link u-clickable" href="/posts/20240302_browsercomponents/#intro">Intro</a>
+</h2>
+<p>迁移指南: <a href="https://www.chromium.org/developers/design-documents/cookbook/">https://www.chromium.org/developers/design-documents/cookbook/</a></p>
+<p>Layered design of a component:</p>
+<p><img src="image-20240217102541661.png" alt="image-20240217102541661"></p>
+<p>What is a browser component?</p>
+<p><img src="image-20240217103631384.png" alt="image-20240217103631384"></p>
+<p>Directory structure of a browser component:</p>
+<p><img src="image-20240217103551252.png" alt="image-20240217103551252"></p>
+<h2 id="example-safe-browsing">
+  <a class="Heading-link u-clickable" href="/posts/20240302_browsercomponents/#example-safe-browsing">Example: safe browsing</a>
+</h2>
+<p>以security_interstitials为例来看一下component的相关实现。要测试safe browsing可以用以下网站 <a href="https://testsafebrowsing.appspot.com/">https://testsafebrowsing.appspot.com/</a> （注意在chrome里要打开安全浏览）。</p>
+<p><code>README</code>中提到<code>SecurityInterstitialControllerClient </code>处理安全浏览相关的提示逻辑，搜它的子类，我们以<code>SSLErrorControllerClient</code>为例。如果尝试访问<code>chrome://interstitial</code>中关于SSL的链接会触发以下调用：</p>
+<p><img src="%E6%9C%AA%E5%91%BD%E5%90%8D%E7%BB%98%E5%9B%BE.drawio.png" alt="未命名绘图.drawio"></p>
+<p>相关的统计数据在单例<code>SafeBrowsingMetricsCollectorFactory</code>中。</p>
+<p><a href="https://www.chromium.org/developers/design-documents/safebrowsing/">https://www.chromium.org/developers/design-documents/safebrowsing/</a></p>
+
+    
+
+  
+
+  
+
+
+
+
+
+  <footer>
+    
+      
+        <ul class="Tags">
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/categories/tech/" rel="tag">tech</a>
+            </li>
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/categories/chromium/" rel="tag">chromium</a>
+            </li>
+          
+        </ul>
+      
+    
+      
+        <ul class="Tags">
+          
+        </ul>
+      
+    
+  </footer>
+
+    
+  
+    
+    
+    <script src="https://utteranc.es/client.js" data-repo="your repo" data-issue-term="pathname" data-theme="github-light" crossorigin="anonymous" async></script>
+  
+
+  </article>
+
+
+      </div>
+    </div>
+  </main>
+  
+  <footer class="Footer">
+    <div class="u-wrapper">
+      <div class="u-padding u-noboosting">
+        Except where otherwise noted, content on this site is licensed under a &#32; <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

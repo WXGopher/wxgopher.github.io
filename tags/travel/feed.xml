@@ -2,13 +2,13 @@
 <?xml-stylesheet type="text/xsl" href="https://www.wxgopher.cc/xml/base.min.xml" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on wxgopher</title>
-    <link>https://www.wxgopher.cc/categories/</link>
-    <description>Recent content in Categories on wxgopher</description>
+    <title>travel&#34; on wxgopher</title>
+    <link>https://www.wxgopher.cc/tags/travel/</link>
+    <description>Recent content in travel&#34; on wxgopher</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>周五, 01 3月 2024 12:13:38 +0530</lastBuildDate>
-    <atom:link rel="self" href="https://www.wxgopher.cc/categories/feed.xml" type="application/rss+xml" />
+    <lastBuildDate>周日, 10 9月 2023 12:13:38 +0530</lastBuildDate>
+    <atom:link rel="self" href="https://www.wxgopher.cc/tags/travel/feed.xml" type="application/rss+xml" />
     <item>
       <title>Browser components</title>
       <link>https://www.wxgopher.cc/posts/20240302_browsercomponents/</link>
