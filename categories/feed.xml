@@ -433,8 +433,15 @@
 &lt;/h2&gt;
 &lt;p&gt;需要用到的几个文档：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;vscode 配置clangd &lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md&#34;&gt;https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;windows下从源码构建 &lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md&#34;&gt;https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;vscode 配置clangd &lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md&#34;&gt;https://chromium.googlesource.com/chromium/src/+/master/docs/clangd.md&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;windows下从源码构建 &lt;a href=&#34;https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md&#34;&gt;https://chromium.googlesource.com/chromium/src/+/main/docs/windows_build_instructions.md&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Life of a Chromium Developer: &lt;a href=&#34;https://docs.google.com/presentation/d/1abnqM9j6zFodPHA38JG1061rG2iGj_GABxEDgZsdbJg/edit#slide=id.i161&#34;&gt;https://docs.google.com/presentation/d/1abnqM9j6zFodPHA38JG1061rG2iGj_GABxEDgZsdbJg/edit#slide=id.i161&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
 </description>
     </item>
