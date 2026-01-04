@@ -78,6 +78,15 @@
     
     
   
+    
+    
+    
+      
+      
+    
+    
+    
+  
 
 
   
@@ -131,6 +140,153 @@
         
 
   
+  
+    <article>
+      <header class="Heading">
+  <h2 class="Heading-title">
+    <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/" rel="bookmark">LaTeX与学术英文写作</a>
+  </h2>
+  
+    <time datetime="2019-05-01T12:13:38&#43;05:30">2019年5月1日</time>
+  
+</header>
+      
+        <p>本文为笔者作为业余的LaTeX使用者所作的心得分享，旨在帮助刚接触LaTeX的同事快速上手这一强大的排版工具。文末夹杂一些关于英文学术写作的小技巧供读者参考。更多关于TeX排版技术的研究可以参考文末的“推荐研读材料”。</p>
+<h2 id="latex基础知识扫盲">
+  <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/#latex%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86%e6%89%ab%e7%9b%b2">LaTeX基础知识扫盲</a>
+</h2>
+<blockquote>
+<p>Q：什么是LaTeX？它和TeX有什么区别？</p>
+</blockquote>
+<p>A：高德纳在1978年实现了第一版的TeX引擎，用来进行书籍排版。LaTeX是针对TeX进行的封装和扩展。详细的历史可以参考文末参考文献中的“雷太赫排版系统简介 / 包太雷”第8页。本文会混用TeX/LaTeX。</p>
+<blockquote>
+<p>Q：我可以从哪里快速上手TeX的基本概念、原理等?</p>
+</blockquote>
+<p>A：最快的方式是参考“雷太赫排版系统简介 / 包太雷”。</p>
+<blockquote>
+<p>Q：我应该在什么情况下使用TeX？</p>
+</blockquote>
+<p>A：会议论文投稿一般会给出TeX模板；希望写有大量数学公式的文档；进行简单的幻灯片制作（参见后文对beamer的介绍）；希望使用源码托管系统托管文档；进行书籍排版等。</p>
+<blockquote>
+<p>Q：什么是TeX发行版？我应该使用哪个发行版？</p>
+</blockquote>
+<p>A：发行版是对集合TeX排版引擎、格式、宏包、驱动等连同一些实用程序 (utilities) ，遵照 TEX 的规范打包集成在一起，形成的一套软件系统（摘自“雷太赫排版系统简介”），发行版一般自带一个编辑器前端（比如TeX Works）。笔者推荐使用TeX Live，并使用地球上现存最强的TeX专用编辑器TeX Studio进行写作，MikTeX发行版不再推荐使用，因其实现标准与TeX标准略有偏差（此处引知乎用户<a href="https://www.zhihu.com/people/li-a-ling">李阿玲</a>的回答），导致搜索故障排查信息不如TeX Live发行版方便。CTeX套装（MikTeX+WinEdt，注意这里不是指<code>ctex</code>宏包）不再推荐使用，因其自带的WinEdt编辑器是破解版，存在版权风险。</p>
+<blockquote>
+<p>Q：别人家为什么可以PDF和TeX源码双向跳转？</p>
+</blockquote>
+<p>A：这个特性叫SyncTeX，一般的TeX发行版是附带此功能的。SyncTeX生成的中间产物扩展名为<code>.synctex.gz</code>，删除这个文件并重新生成可以部分解决SyncTeX无法自动跳转的问题。</p>
+<blockquote>
+<p>Q：TeX Live如何安装新的宏包？</p>
+</blockquote>
+<p>A：通过<code>tlmgr</code>进行。安装TeX Live会自动安装<code>tlmgr</code>。或者是在<a href="https://ctan.org/">CTAN</a>查找手动下载安装。</p>
+<blockquote>
+<p>Q：下载安装TeX系统/宏包为什么如此慢？</p>
+</blockquote>
+<p>A：两个原因。其一是TeX宏包一般都非常小，又非常多，初次安装的时候会比较慢。再者TeX的主镜像源在国外。国内可以使用比较稳定的镜像源有清华大学的TUNA，参考<a href="https://mirror.tuna.tsinghua.edu.cn/help/CTAN/">这个页面</a>。</p>
+<h2 id="安装和配置tex写作环境">
+  <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/#%e5%ae%89%e8%a3%85%e5%92%8c%e9%85%8d%e7%bd%aetex%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83">安装和配置TeX写作环境</a>
+</h2>
+<h3 id="在线写作环境">
+  <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/#%e5%9c%a8%e7%ba%bf%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83">在线写作环境</a>
+</h3>
+<p>现在市面上有一些基础功能免费的在线LaTeX写作网站，例如<a href="https://www.overleaf.com/">Overleaf</a>。这类平台的优点是便捷，多平台同步，但是也存在如下缺点：</p>
+<ol>
+<li>在线文档协作平台不符合公司的安全规范，有触犯公司高压线的风险；</li>
+<li>故障调试不如本地环境便捷；</li>
+<li>（截止到2020年初）在线平台的代码高亮/自动补全等功能都不如TeX Studio等专业的TeX IDE。</li>
+</ol>
+<h3 id="离线写作环境">
+  <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/#%e7%a6%bb%e7%ba%bf%e5%86%99%e4%bd%9c%e7%8e%af%e5%a2%83">离线写作环境</a>
+</h3>
+<p>笔者推荐使用<a href="https://www.tug.org/texlive/">TeX Live</a>发行版，并推荐使用<a href="https://www.texstudio.org/">TeX Studio</a>（支持几乎市面上所有TeX前端的功能，并且是跨平台、开源、免费的）这款IDE作为协作工具。这两款软件都有Windows/Mac/Linux版本。</p>
+<p>从TeX Live<a href="https://www.tug.org/texlive/">官方网站</a> 下载安装程序安装，然后下载TeX Studio。需要注意的是TeX Studio的安装尽量在TeX Live以后，这样TeX Studio可以正确配置相关的执行命令。</p>
+<p>如果不知道从哪里开始，从<a href="https://www.latextemplates.com/">LaTeX Templates</a>下载一份自己喜欢的模板，开始写作~</p>
+<h2 id="一些零碎的小技巧">
+  <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/#%e4%b8%80%e4%ba%9b%e9%9b%b6%e7%a2%8e%e7%9a%84%e5%b0%8f%e6%8a%80%e5%b7%a7">一些零碎的小技巧</a>
+</h2>
+<ol>
+<li>开始写作之前建议先通读ltxprimer（文末参考文献），这本书只有100多页，可以扫清绝大多数使用TeX遇到的障碍；</li>
+<li>LaTeX可以用来制作幻灯片，使用<a href="https://www.latextemplates.com/template/beamer-presentation">Beamer</a>类；</li>
+<li>如果要批量OCR数学公式转换成TeX代码，可以使用<a href="https://mathpix.com/">Mathpix</a>。这款软件是免费试用的；</li>
+<li>类似于C++的<code>#define</code>，TeX有<a href="https://www.complang.tuwien.ac.at/anton/latex/ltx-18.html">newcommmand/renewcommand</a>；</li>
+<li><strong>非有必要，不要随意导入新的宏包</strong>：TeX由于历史遗留问题，宏包与宏包之间可能存在冲突；</li>
+<li><a href="https://tex.stackexchange.com/">爆栈网(stackoverflow)的TeX板块</a>是最活跃的解决TeX问题的社区；</li>
+<li>文献引用使用<a href="http://www.bibtex.org/">bibtex</a>。查询引用文献可以用Google Scholar，搜索条目下面有bibtex格式。TeX Live默认配置了bibtex，只需要在文章中加入<code>\bibliography{bibfile.bib}</code>即可。详细的引用文献使用方法可以参考<a href="bibliography_management_with_bibtex">Overleaf的这个页面</a>。</li>
+</ol>
+<h2 id="英文学术写作技巧">
+  <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/#%e8%8b%b1%e6%96%87%e5%ad%a6%e6%9c%af%e5%86%99%e4%bd%9c%e6%8a%80%e5%b7%a7">英文学术写作技巧</a>
+</h2>
+<ol>
+<li>拿不准句子别扭不别扭，用Google搜一下；</li>
+<li>不知道该使用的介词搭配，用英语语料库查一下（常用的英语语料库附在文末），一个使用的例子可以参考<a href="https://zhuanlan.zhihu.com/p/28838654">怎样利用COCA语料库提升英语用词水平？</a>；</li>
+<li>标点符号的使用可以参考<a href="https://dictionary.cambridge.org/grammar/british-grammar/punctuation">Punctuation - English Grammar Today</a>；</li>
+<li>快速回顾英语语法和写作技巧参考文末附录。</li>
+</ol>
+<h2 id="推荐研读资料">
+  <a class="Heading-link u-clickable" href="/posts/latex%E4%B8%8E%E5%AD%A6%E6%9C%AF%E8%8B%B1%E6%96%87%E5%86%99%E4%BD%9C/#%e6%8e%a8%e8%8d%90%e7%a0%94%e8%af%bb%e8%b5%84%e6%96%99">推荐研读资料</a>
+</h2>
+<p>LaTeX排版技术</p>
+<ul>
+<li>雷太赫排版系统简介 / 包太雷</li>
+<li>The ltxprimer / Indian Tex User Group</li>
+<li>LaTeX入门 / 刘海洋</li>
+</ul>
+<p>英文写作（从简略到详细排序）</p>
+<ul>
+<li>语法俱乐部 / 旋元佑</li>
+<li>McGraw-Hill Handbook of English Grammar and Usage / Larry Beason and Mark Lester</li>
+<li>Academic Writing for Graduate Students / Christine B. Feak and John Swales</li>
+<li>Cambridge English in Use / Cambridge University Press</li>
+</ul>
+<p>英语语料库</p>
+<ul>
+<li><a href="https://linggle.com/">Linggle 10^12- Language Reference Search Engines</a></li>
+<li><a href="https://www.english-corpora.org/coca/">Corpus of Contenporary American English</a></li>
+</ul>
+
+      
+      
+
+  
+
+  
+
+
+
+
+
+  <footer>
+    
+      
+        <ul class="Tags">
+          
+        </ul>
+      
+    
+      
+        <ul class="Tags">
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/tags/typography/" rel="tag">typography</a>
+            </li>
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/tags/latex/" rel="tag">latex</a>
+            </li>
+          
+            <li class="Tags-item u-background">
+              <a class="Tags-link u-clickable" href="/tags/notes/" rel="tag">notes</a>
+            </li>
+          
+        </ul>
+      
+    
+  </footer>
+
+    </article>
+    
+      <div class="Divider"></div>
+    
   
     <article>
       <header class="Heading">

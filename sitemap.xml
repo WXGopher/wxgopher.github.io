@@ -2,22 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.wxgopher.cc/tags/memo/</loc>
+    <lastmod>2025-08-08T12:13:38+05:30</lastmod>
+  </url><url>
+    <loc>https://www.wxgopher.cc/posts/</loc>
+    <lastmod>2025-08-08T12:13:38+05:30</lastmod>
+  </url><url>
+    <loc>https://www.wxgopher.cc/tags/</loc>
+    <lastmod>2025-08-08T12:13:38+05:30</lastmod>
+  </url><url>
+    <loc>https://www.wxgopher.cc/</loc>
+    <lastmod>2025-08-08T12:13:38+05:30</lastmod>
+  </url><url>
+    <loc>https://www.wxgopher.cc/posts/20240512_%E6%97%A5%E5%B8%B8%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-08-08T12:13:38+05:30</lastmod>
+  </url><url>
     <loc>https://www.wxgopher.cc/posts/20240302_browsercomponents/</loc>
     <lastmod>2024-03-02T12:13:38+05:30</lastmod>
   </url><url>
     <loc>https://www.wxgopher.cc/tags/chromium/</loc>
     <lastmod>2024-03-02T12:13:38+05:30</lastmod>
   </url><url>
-    <loc>https://www.wxgopher.cc/posts/</loc>
-    <lastmod>2024-03-02T12:13:38+05:30</lastmod>
-  </url><url>
-    <loc>https://www.wxgopher.cc/tags/</loc>
-    <lastmod>2024-03-02T12:13:38+05:30</lastmod>
-  </url><url>
     <loc>https://www.wxgopher.cc/tags/tech/</loc>
-    <lastmod>2024-03-02T12:13:38+05:30</lastmod>
-  </url><url>
-    <loc>https://www.wxgopher.cc/</loc>
     <lastmod>2024-03-02T12:13:38+05:30</lastmod>
   </url><url>
     <loc>https://www.wxgopher.cc/tags/notes/</loc>
@@ -28,9 +34,6 @@
   </url><url>
     <loc>https://www.wxgopher.cc/posts/20240114_%E8%B0%88%E8%AF%BB%E4%B9%A6/</loc>
     <lastmod>2024-01-14T12:13:38+05:30</lastmod>
-  </url><url>
-    <loc>https://www.wxgopher.cc/tags/memo/</loc>
-    <lastmod>2024-01-03T12:13:38+05:30</lastmod>
   </url><url>
     <loc>https://www.wxgopher.cc/posts/20231210_%E7%99%B8%E5%8D%AF%E5%B9%B4%E8%AE%B0/</loc>
     <lastmod>2024-01-03T12:13:38+05:30</lastmod>
